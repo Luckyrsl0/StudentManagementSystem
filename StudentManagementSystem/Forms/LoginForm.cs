@@ -1,39 +1,30 @@
-using System.Diagnostics.Eventing.Reader;
-
 namespace StudentManagementSystem
 {
     public partial class LoginForm : Form
     {
+        // true = password is visible (open eye), false = password is masked (slashed eye)
+        private bool isPasswordVisible = false;
+
         public LoginForm()
         {
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void eyeIcon_Click(object sender, EventArgs e)
         {
+            isPasswordVisible = !isPasswordVisible;
 
+            if (isPasswordVisible)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+                eyeIcon.Image = Properties.Resources.ShowEyeIcon;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+                eyeIcon.Image = Properties.Resources.HiddenEyeIcon;
+            }
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
@@ -47,7 +38,12 @@ namespace StudentManagementSystem
             }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginLabel_Click(object sender, EventArgs e)
         {
 
         }

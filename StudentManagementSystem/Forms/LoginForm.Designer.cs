@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             logoImage = new PictureBox();
             personIcon = new PictureBox();
             panel1 = new Panel();
             panel2 = new Panel();
-            hideEyeIcon = new PictureBox();
+            eyeIcon = new PictureBox();
             loginBtn = new Button();
             loginLabel = new Label();
             txtUsername = new TextBox();
             txtPassword = new TextBox();
             ((System.ComponentModel.ISupportInitialize)logoImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)personIcon).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)hideEyeIcon).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)eyeIcon).BeginInit();
             SuspendLayout();
             // 
             // logoImage
             // 
-            logoImage.Image = (Image)resources.GetObject("logoImage.Image");
-            logoImage.Location = new Point(121, 52);
+            logoImage.BackgroundImageLayout = ImageLayout.Zoom;
+            logoImage.Image = Properties.Resources.Logo;
+            logoImage.Location = new Point(63, 11);
             logoImage.Margin = new Padding(3, 2, 3, 2);
             logoImage.Name = "logoImage";
-            logoImage.Size = new Size(136, 82);
+            logoImage.Size = new Size(269, 134);
             logoImage.SizeMode = PictureBoxSizeMode.Zoom;
             logoImage.TabIndex = 0;
             logoImage.TabStop = false;
             // 
             // personIcon
             // 
-            personIcon.Image = (Image)resources.GetObject("personIcon.Image");
+            personIcon.Image = Properties.Resources.PersonIcon;
             personIcon.Location = new Point(47, 194);
             personIcon.Margin = new Padding(3, 2, 3, 2);
             personIcon.Name = "personIcon";
@@ -83,17 +83,18 @@
             panel2.Size = new Size(299, 2);
             panel2.TabIndex = 4;
             // 
-            // hideEyeIcon
+            // eyeIcon
             // 
-            hideEyeIcon.Image = (Image)resources.GetObject("hideEyeIcon.Image");
-            hideEyeIcon.Location = new Point(47, 268);
-            hideEyeIcon.Margin = new Padding(3, 2, 3, 2);
-            hideEyeIcon.Name = "hideEyeIcon";
-            hideEyeIcon.Size = new Size(44, 31);
-            hideEyeIcon.SizeMode = PictureBoxSizeMode.Zoom;
-            hideEyeIcon.TabIndex = 3;
-            hideEyeIcon.TabStop = false;
-            hideEyeIcon.Click += pictureBox3_Click;
+            eyeIcon.Cursor = Cursors.Hand;
+            eyeIcon.Image = Properties.Resources.HiddenEyeIcon;
+            eyeIcon.Location = new Point(47, 268);
+            eyeIcon.Margin = new Padding(3, 2, 3, 2);
+            eyeIcon.Name = "eyeIcon";
+            eyeIcon.Size = new Size(44, 31);
+            eyeIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            eyeIcon.TabIndex = 3;
+            eyeIcon.TabStop = false;
+            eyeIcon.Click += eyeIcon_Click;
             // 
             // loginBtn
             // 
@@ -104,7 +105,7 @@
             loginBtn.Location = new Point(108, 357);
             loginBtn.Margin = new Padding(3, 2, 3, 2);
             loginBtn.Name = "loginBtn";
-            loginBtn.Size = new Size(176, 38);
+            loginBtn.Size = new Size(176, 49);
             loginBtn.TabIndex = 5;
             loginBtn.Text = "Log in";
             loginBtn.UseVisualStyleBackColor = false;
@@ -114,13 +115,15 @@
             // 
             loginLabel.AutoSize = true;
             loginLabel.BackColor = SystemColors.Control;
-            loginLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            loginLabel.Font = new Font("Bauhaus 93", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
             loginLabel.ForeColor = SystemColors.Highlight;
-            loginLabel.Location = new Point(140, 136);
+            loginLabel.Location = new Point(136, 147);
             loginLabel.Name = "loginLabel";
-            loginLabel.Size = new Size(99, 29);
+            loginLabel.Size = new Size(124, 39);
             loginLabel.TabIndex = 6;
             loginLabel.Text = "LOG IN";
+            loginLabel.TextAlign = ContentAlignment.MiddleCenter;
+            loginLabel.Click += loginLabel_Click;
             // 
             // txtUsername
             // 
@@ -128,12 +131,11 @@
             txtUsername.BorderStyle = BorderStyle.None;
             txtUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUsername.ForeColor = SystemColors.Highlight;
-            txtUsername.Location = new Point(97, 194);
+            txtUsername.Location = new Point(97, 200);
             txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(249, 31);
+            txtUsername.Size = new Size(249, 22);
             txtUsername.TabIndex = 7;
-            txtUsername.TextChanged += textBox1_TextChanged;
             // 
             // txtPassword
             // 
@@ -141,11 +143,11 @@
             txtPassword.BorderStyle = BorderStyle.None;
             txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPassword.ForeColor = SystemColors.Highlight;
-            txtPassword.Location = new Point(97, 268);
-            txtPassword.Multiline = true;
+            txtPassword.Location = new Point(97, 274);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(249, 31);
+            txtPassword.Size = new Size(249, 22);
             txtPassword.TabIndex = 8;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // LoginForm
             // 
@@ -157,17 +159,18 @@
             Controls.Add(loginLabel);
             Controls.Add(loginBtn);
             Controls.Add(panel2);
-            Controls.Add(hideEyeIcon);
+            Controls.Add(eyeIcon);
             Controls.Add(panel1);
             Controls.Add(personIcon);
             Controls.Add(logoImage);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
-            Text = "Form1";
+            Text = "Login";
+            Load += LoginForm_Load;
             ((System.ComponentModel.ISupportInitialize)logoImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)personIcon).EndInit();
-            ((System.ComponentModel.ISupportInitialize)hideEyeIcon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)eyeIcon).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -178,7 +181,7 @@
         private PictureBox personIcon;
         private Panel panel1;
         private Panel panel2;
-        private PictureBox hideEyeIcon;
+        private PictureBox eyeIcon;
         private Button loginBtn;
         private Label loginLabel;
         private TextBox txtUsername;
