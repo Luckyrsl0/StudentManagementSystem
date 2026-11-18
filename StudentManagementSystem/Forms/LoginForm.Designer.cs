@@ -34,7 +34,7 @@
             panel1 = new Panel();
             panel2 = new Panel();
             hideEyeIcon = new PictureBox();
-            button1 = new Button();
+            loginBtn = new Button();
             loginLabel = new Label();
             txtUsername = new TextBox();
             txtPassword = new TextBox();
@@ -95,19 +95,20 @@
             hideEyeIcon.TabStop = false;
             hideEyeIcon.Click += pictureBox3_Click;
             // 
-            // button1
+            // loginBtn
             // 
-            button1.BackColor = SystemColors.HotTrack;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(108, 357);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(176, 38);
-            button1.TabIndex = 5;
-            button1.Text = "Log in";
-            button1.UseVisualStyleBackColor = false;
+            loginBtn.BackColor = SystemColors.HotTrack;
+            loginBtn.FlatStyle = FlatStyle.Flat;
+            loginBtn.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            loginBtn.ForeColor = SystemColors.Control;
+            loginBtn.Location = new Point(108, 357);
+            loginBtn.Margin = new Padding(3, 2, 3, 2);
+            loginBtn.Name = "loginBtn";
+            loginBtn.Size = new Size(176, 38);
+            loginBtn.TabIndex = 5;
+            loginBtn.Text = "Log in";
+            loginBtn.UseVisualStyleBackColor = false;
+            loginBtn.Click += loginBtn_Click;
             // 
             // loginLabel
             // 
@@ -154,7 +155,7 @@
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
             Controls.Add(loginLabel);
-            Controls.Add(button1);
+            Controls.Add(loginBtn);
             Controls.Add(panel2);
             Controls.Add(hideEyeIcon);
             Controls.Add(panel1);
@@ -178,7 +179,7 @@
         private Panel panel1;
         private Panel panel2;
         private PictureBox hideEyeIcon;
-        private Button button1;
+        private Button loginBtn;
         private Label loginLabel;
         private TextBox txtUsername;
         private TextBox txtPassword;
