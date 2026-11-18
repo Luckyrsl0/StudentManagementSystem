@@ -29,38 +29,41 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
+            logoImage = new PictureBox();
+            personIcon = new PictureBox();
             panel1 = new Panel();
             panel2 = new Panel();
-            pictureBox3 = new PictureBox();
+            hideEyeIcon = new PictureBox();
             button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            loginLabel = new Label();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)logoImage).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)personIcon).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hideEyeIcon).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // logoImage
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(121, 52);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(136, 82);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            logoImage.Image = (Image)resources.GetObject("logoImage.Image");
+            logoImage.Location = new Point(121, 52);
+            logoImage.Margin = new Padding(3, 2, 3, 2);
+            logoImage.Name = "logoImage";
+            logoImage.Size = new Size(136, 82);
+            logoImage.SizeMode = PictureBoxSizeMode.Zoom;
+            logoImage.TabIndex = 0;
+            logoImage.TabStop = false;
             // 
-            // pictureBox2
+            // personIcon
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(47, 194);
-            pictureBox2.Margin = new Padding(3, 2, 3, 2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(44, 31);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
+            personIcon.Image = (Image)resources.GetObject("personIcon.Image");
+            personIcon.Location = new Point(47, 194);
+            personIcon.Margin = new Padding(3, 2, 3, 2);
+            personIcon.Name = "personIcon";
+            personIcon.Size = new Size(44, 31);
+            personIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            personIcon.TabIndex = 1;
+            personIcon.TabStop = false;
             // 
             // panel1
             // 
@@ -80,16 +83,17 @@
             panel2.Size = new Size(299, 2);
             panel2.TabIndex = 4;
             // 
-            // pictureBox3
+            // hideEyeIcon
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(47, 268);
-            pictureBox3.Margin = new Padding(3, 2, 3, 2);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(44, 31);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 3;
-            pictureBox3.TabStop = false;
+            hideEyeIcon.Image = (Image)resources.GetObject("hideEyeIcon.Image");
+            hideEyeIcon.Location = new Point(47, 268);
+            hideEyeIcon.Margin = new Padding(3, 2, 3, 2);
+            hideEyeIcon.Name = "hideEyeIcon";
+            hideEyeIcon.Size = new Size(44, 31);
+            hideEyeIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            hideEyeIcon.TabIndex = 3;
+            hideEyeIcon.TabStop = false;
+            hideEyeIcon.Click += pictureBox3_Click;
             // 
             // button1
             // 
@@ -102,37 +106,81 @@
             button1.Name = "button1";
             button1.Size = new Size(176, 38);
             button1.TabIndex = 5;
-            button1.Text = "button1";
+            button1.Text = "Log in";
             button1.UseVisualStyleBackColor = false;
+            // 
+            // loginLabel
+            // 
+            loginLabel.AutoSize = true;
+            loginLabel.BackColor = SystemColors.Control;
+            loginLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            loginLabel.ForeColor = SystemColors.Highlight;
+            loginLabel.Location = new Point(140, 136);
+            loginLabel.Name = "loginLabel";
+            loginLabel.Size = new Size(99, 29);
+            loginLabel.TabIndex = 6;
+            loginLabel.Text = "LOG IN";
+            // 
+            // txtUsername
+            // 
+            txtUsername.BackColor = SystemColors.Control;
+            txtUsername.BorderStyle = BorderStyle.None;
+            txtUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsername.ForeColor = SystemColors.Highlight;
+            txtUsername.Location = new Point(97, 194);
+            txtUsername.Multiline = true;
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(249, 31);
+            txtUsername.TabIndex = 7;
+            txtUsername.TextChanged += textBox1_TextChanged;
+            // 
+            // txtPassword
+            // 
+            txtPassword.BackColor = SystemColors.Control;
+            txtPassword.BorderStyle = BorderStyle.None;
+            txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.ForeColor = SystemColors.Highlight;
+            txtPassword.Location = new Point(97, 268);
+            txtPassword.Multiline = true;
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(249, 31);
+            txtPassword.TabIndex = 8;
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(391, 434);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsername);
+            Controls.Add(loginLabel);
             Controls.Add(button1);
             Controls.Add(panel2);
-            Controls.Add(pictureBox3);
+            Controls.Add(hideEyeIcon);
             Controls.Add(panel1);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
+            Controls.Add(personIcon);
+            Controls.Add(logoImage);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logoImage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)personIcon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hideEyeIcon).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
+        private PictureBox logoImage;
+        private PictureBox personIcon;
         private Panel panel1;
         private Panel panel2;
-        private PictureBox pictureBox3;
+        private PictureBox hideEyeIcon;
         private Button button1;
+        private Label loginLabel;
+        private TextBox txtUsername;
+        private TextBox txtPassword;
     }
 }
