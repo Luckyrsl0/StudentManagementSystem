@@ -115,11 +115,11 @@
             // 
             loginLabel.AutoSize = true;
             loginLabel.BackColor = SystemColors.Control;
-            loginLabel.Font = new Font("Bauhaus 93", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            loginLabel.Font = new Font("Microsoft Sans Serif", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
             loginLabel.ForeColor = SystemColors.Highlight;
-            loginLabel.Location = new Point(136, 147);
+            loginLabel.Location = new Point(125, 147);
             loginLabel.Name = "loginLabel";
-            loginLabel.Size = new Size(124, 39);
+            loginLabel.Size = new Size(139, 39);
             loginLabel.TabIndex = 6;
             loginLabel.Text = "LOG IN";
             loginLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -166,6 +166,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             Load += LoginForm_Load;
             ((System.ComponentModel.ISupportInitialize)logoImage).EndInit();
