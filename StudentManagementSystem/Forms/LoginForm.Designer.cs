@@ -37,6 +37,7 @@
             loginLabel = new Label();
             txtUsername = new TextBox();
             txtPassword = new TextBox();
+            ExitLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)logoImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)personIcon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)eyeIcon).BeginInit();
@@ -46,7 +47,7 @@
             // 
             logoImage.BackgroundImageLayout = ImageLayout.Zoom;
             logoImage.Image = Properties.Resources.Logo;
-            logoImage.Location = new Point(63, 11);
+            logoImage.Location = new Point(62, 11);
             logoImage.Margin = new Padding(3, 2, 3, 2);
             logoImage.Name = "logoImage";
             logoImage.Size = new Size(269, 134);
@@ -57,7 +58,7 @@
             // personIcon
             // 
             personIcon.Image = Properties.Resources.PersonIcon;
-            personIcon.Location = new Point(47, 194);
+            personIcon.Location = new Point(44, 266);
             personIcon.Margin = new Padding(3, 2, 3, 2);
             personIcon.Name = "personIcon";
             personIcon.Size = new Size(44, 31);
@@ -68,7 +69,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.HotTrack;
-            panel1.Location = new Point(47, 229);
+            panel1.Location = new Point(44, 301);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(299, 2);
@@ -77,7 +78,7 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.HotTrack;
-            panel2.Location = new Point(47, 303);
+            panel2.Location = new Point(44, 375);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
             panel2.Size = new Size(299, 2);
@@ -87,7 +88,7 @@
             // 
             eyeIcon.Cursor = Cursors.Hand;
             eyeIcon.Image = Properties.Resources.HiddenEyeIcon;
-            eyeIcon.Location = new Point(47, 268);
+            eyeIcon.Location = new Point(44, 340);
             eyeIcon.Margin = new Padding(3, 2, 3, 2);
             eyeIcon.Name = "eyeIcon";
             eyeIcon.Size = new Size(44, 31);
@@ -99,10 +100,11 @@
             // loginBtn
             // 
             loginBtn.BackColor = SystemColors.HotTrack;
+            loginBtn.Cursor = Cursors.Hand;
             loginBtn.FlatStyle = FlatStyle.Flat;
-            loginBtn.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            loginBtn.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             loginBtn.ForeColor = SystemColors.Control;
-            loginBtn.Location = new Point(108, 357);
+            loginBtn.Location = new Point(113, 417);
             loginBtn.Margin = new Padding(3, 2, 3, 2);
             loginBtn.Name = "loginBtn";
             loginBtn.Size = new Size(176, 49);
@@ -115,11 +117,11 @@
             // 
             loginLabel.AutoSize = true;
             loginLabel.BackColor = SystemColors.Control;
-            loginLabel.Font = new Font("Microsoft Sans Serif", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            loginLabel.Font = new Font("Segoe UI Black", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
             loginLabel.ForeColor = SystemColors.Highlight;
-            loginLabel.Location = new Point(125, 147);
+            loginLabel.Location = new Point(123, 155);
             loginLabel.Name = "loginLabel";
-            loginLabel.Size = new Size(139, 39);
+            loginLabel.Size = new Size(141, 47);
             loginLabel.TabIndex = 6;
             loginLabel.Text = "LOG IN";
             loginLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -131,7 +133,7 @@
             txtUsername.BorderStyle = BorderStyle.None;
             txtUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUsername.ForeColor = SystemColors.Highlight;
-            txtUsername.Location = new Point(97, 200);
+            txtUsername.Location = new Point(97, 272);
             txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(249, 22);
@@ -143,17 +145,32 @@
             txtPassword.BorderStyle = BorderStyle.None;
             txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPassword.ForeColor = SystemColors.Highlight;
-            txtPassword.Location = new Point(97, 274);
+            txtPassword.Location = new Point(94, 346);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(249, 22);
             txtPassword.TabIndex = 8;
             txtPassword.UseSystemPasswordChar = true;
             // 
+            // ExitLabel
+            // 
+            ExitLabel.AutoSize = true;
+            ExitLabel.Cursor = Cursors.Hand;
+            ExitLabel.FlatStyle = FlatStyle.Flat;
+            ExitLabel.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ExitLabel.ForeColor = SystemColors.HotTrack;
+            ExitLabel.Location = new Point(178, 472);
+            ExitLabel.Name = "ExitLabel";
+            ExitLabel.Size = new Size(39, 22);
+            ExitLabel.TabIndex = 9;
+            ExitLabel.Text = "Exit";
+            ExitLabel.Click += ExitLabel_Click;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(391, 434);
+            ClientSize = new Size(391, 527);
+            Controls.Add(ExitLabel);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
             Controls.Add(loginLabel);
@@ -187,5 +204,6 @@
         private Label loginLabel;
         private TextBox txtUsername;
         private TextBox txtPassword;
+        private Label ExitLabel;
     }
 }
