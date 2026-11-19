@@ -1,3 +1,5 @@
+using StudentManagementSystem.Forms;
+
 namespace StudentManagementSystem
 {
     public partial class LoginForm : Form
@@ -31,6 +33,11 @@ namespace StudentManagementSystem
             if (txtUsername.Text == "admin" && txtPassword.Text == "admin1234")
             {
                 MessageBox.Show("Login successful!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MainForm mainForm = new MainForm();
+                mainForm.FormClosed += (s, args) => this.Close(); // Mo-exit ang tibuok app inig close sa MainForm
+                mainForm.Show();
+                this.Hide();
             }
             else
             {
