@@ -207,10 +207,10 @@
             panel2.Controls.Add(panel4);
             panel2.Controls.Add(panel3);
             panel2.Controls.Add(homeLabel);
-            panel2.Location = new Point(223, 53);
+            panel2.Location = new Point(223, 51);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(675, 431);
+            panel2.Size = new Size(675, 433);
             panel2.TabIndex = 3;
             // 
             // panel4
@@ -253,7 +253,6 @@
             Controls.Add(panel1);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
-            FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
