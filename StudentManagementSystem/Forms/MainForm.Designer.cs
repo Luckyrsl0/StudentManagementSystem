@@ -31,7 +31,7 @@
             menuStrip1 = new MenuStrip();
             studentsToolStripMenuItem = new ToolStripMenuItem();
             coursesToolStripMenuItem = new ToolStripMenuItem();
-            inrollmentsToolStripMenuItem = new ToolStripMenuItem();
+            enrollmentsToolStripMenuItem = new ToolStripMenuItem();
             usersToolStripMenuItem = new ToolStripMenuItem();
             healthToolStripMenuItem = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
@@ -40,7 +40,7 @@
             stripSearchLabel = new ToolStripLabel();
             panel1 = new Panel();
             logoutBtn = new Button();
-            UserAdminBtn = new Button();
+            adminBtn = new Button();
             enrollmentsBtn = new Button();
             courseBtn = new Button();
             studentBtn = new Button();
@@ -58,7 +58,7 @@
             // 
             menuStrip1.BackColor = SystemColors.MenuHighlight;
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { studentsToolStripMenuItem, coursesToolStripMenuItem, inrollmentsToolStripMenuItem, usersToolStripMenuItem, healthToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { studentsToolStripMenuItem, coursesToolStripMenuItem, enrollmentsToolStripMenuItem, usersToolStripMenuItem, healthToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
@@ -72,30 +72,35 @@
             studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
             studentsToolStripMenuItem.Size = new Size(65, 20);
             studentsToolStripMenuItem.Text = "Students";
+            studentsToolStripMenuItem.Click += studentsToolStripMenuItem_Click;
             // 
             // coursesToolStripMenuItem
             // 
             coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
             coursesToolStripMenuItem.Size = new Size(61, 20);
             coursesToolStripMenuItem.Text = "Courses";
+            coursesToolStripMenuItem.Click += coursesToolStripMenuItem_Click;
             // 
-            // inrollmentsToolStripMenuItem
+            // enrollmentsToolStripMenuItem
             // 
-            inrollmentsToolStripMenuItem.Name = "inrollmentsToolStripMenuItem";
-            inrollmentsToolStripMenuItem.Size = new Size(82, 20);
-            inrollmentsToolStripMenuItem.Text = "Enrollments";
+            enrollmentsToolStripMenuItem.Name = "enrollmentsToolStripMenuItem";
+            enrollmentsToolStripMenuItem.Size = new Size(82, 20);
+            enrollmentsToolStripMenuItem.Text = "Enrollments";
+            enrollmentsToolStripMenuItem.Click += enrollmentsToolStripMenuItem_Click;
             // 
             // usersToolStripMenuItem
             // 
             usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             usersToolStripMenuItem.Size = new Size(47, 20);
             usersToolStripMenuItem.Text = "Users";
+            usersToolStripMenuItem.Click += usersToolStripMenuItem_Click;
             // 
             // healthToolStripMenuItem
             // 
             healthToolStripMenuItem.Name = "healthToolStripMenuItem";
             healthToolStripMenuItem.Size = new Size(44, 20);
             healthToolStripMenuItem.Text = "Help";
+            healthToolStripMenuItem.Click += helpToolStripMenuItem_Click;
             // 
             // toolStrip1
             // 
@@ -114,7 +119,7 @@
             newStudentStripLabel.Name = "newStudentStripLabel";
             newStudentStripLabel.Size = new Size(75, 22);
             newStudentStripLabel.Text = "New Student";
-            newStudentStripLabel.Click += toolStripLabel2_Click;
+            newStudentStripLabel.Click += newStudentStripLabel_Click;
             // 
             // toolStripSeparator1
             // 
@@ -127,12 +132,13 @@
             stripSearchLabel.Name = "stripSearchLabel";
             stripSearchLabel.Size = new Size(42, 22);
             stripSearchLabel.Text = "Search";
+            stripSearchLabel.Click += stripSearchLabel_Click;
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlLightLight;
             panel1.Controls.Add(logoutBtn);
-            panel1.Controls.Add(UserAdminBtn);
+            panel1.Controls.Add(adminBtn);
             panel1.Controls.Add(enrollmentsBtn);
             panel1.Controls.Add(courseBtn);
             panel1.Controls.Add(studentBtn);
@@ -151,21 +157,21 @@
             logoutBtn.Name = "logoutBtn";
             logoutBtn.Size = new Size(195, 43);
             logoutBtn.TabIndex = 4;
-            logoutBtn.Text = "Log out";
+            logoutBtn.Text = "Logout";
             logoutBtn.UseVisualStyleBackColor = false;
-            logoutBtn.Click += button5_Click;
+            logoutBtn.Click += logoutBtn_Click;
             // 
-            // UserAdminBtn
+            // adminBtn
             // 
-            UserAdminBtn.BackColor = SystemColors.ControlLightLight;
-            UserAdminBtn.Location = new Point(3, 213);
-            UserAdminBtn.Margin = new Padding(3, 2, 3, 2);
-            UserAdminBtn.Name = "UserAdminBtn";
-            UserAdminBtn.Size = new Size(214, 73);
-            UserAdminBtn.TabIndex = 3;
-            UserAdminBtn.Text = "User Management";
-            UserAdminBtn.UseVisualStyleBackColor = false;
-            UserAdminBtn.Click += button4_Click;
+            adminBtn.BackColor = SystemColors.ControlLightLight;
+            adminBtn.Location = new Point(3, 213);
+            adminBtn.Margin = new Padding(3, 2, 3, 2);
+            adminBtn.Name = "adminBtn";
+            adminBtn.Size = new Size(214, 73);
+            adminBtn.TabIndex = 3;
+            adminBtn.Text = "UserManagement";
+            adminBtn.UseVisualStyleBackColor = false;
+            adminBtn.Click += adminBtn_Click;
             // 
             // enrollmentsBtn
             // 
@@ -177,6 +183,7 @@
             enrollmentsBtn.TabIndex = 2;
             enrollmentsBtn.Text = "Enrollments";
             enrollmentsBtn.UseVisualStyleBackColor = false;
+            enrollmentsBtn.Click += enrollmentsBtn_Click;
             // 
             // courseBtn
             // 
@@ -188,6 +195,7 @@
             courseBtn.TabIndex = 1;
             courseBtn.Text = "Courses";
             courseBtn.UseVisualStyleBackColor = false;
+            courseBtn.Click += courseBtn_Click;
             // 
             // studentBtn
             // 
@@ -200,6 +208,7 @@
             studentBtn.TabIndex = 0;
             studentBtn.Text = "Students";
             studentBtn.UseVisualStyleBackColor = false;
+            studentBtn.Click += studentBtn_Click;
             // 
             // panel2
             // 
@@ -273,7 +282,7 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem studentsToolStripMenuItem;
         private ToolStripMenuItem coursesToolStripMenuItem;
-        private ToolStripMenuItem inrollmentsToolStripMenuItem;
+        private ToolStripMenuItem enrollmentsToolStripMenuItem;
         private ToolStripMenuItem usersToolStripMenuItem;
         private ToolStripMenuItem healthToolStripMenuItem;
         private ToolStrip toolStrip1;
@@ -283,7 +292,7 @@
         private Panel panel2;
         private Button courseBtn;
         private Button studentBtn;
-        private Button UserAdminBtn;
+        private Button adminBtn;
         private Button enrollmentsBtn;
         private Button logoutBtn;
         private Label homeLabel;

@@ -15,17 +15,17 @@ namespace StudentManagementSystem.Forms
             InitializeComponent();
         }
 
-        private void toolStripLabel2_Click(object sender, EventArgs e)
+        private void newStudentStripLabel_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void adminBtn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void logoutBtn_Click(object sender, EventArgs e)
         {
 
         }
@@ -41,6 +41,51 @@ namespace StudentManagementSystem.Forms
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void studentBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enrollmentsBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void courseBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stripSearchLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void studentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void coursesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enrollmentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
