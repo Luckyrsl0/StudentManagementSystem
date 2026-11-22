@@ -94,6 +94,7 @@
             // 
             // panel3
             // 
+            panel3.BackColor = SystemColors.InactiveBorder;
             panel3.Controls.Add(label1);
             panel3.Controls.Add(panel4);
             panel3.Location = new Point(291, 81);
@@ -103,6 +104,7 @@
             // 
             // panel4
             // 
+            panel4.BackColor = SystemColors.InactiveBorder;
             panel4.Location = new Point(48, 94);
             panel4.Name = "panel4";
             panel4.Size = new Size(619, 439);
@@ -208,9 +210,9 @@
             // 
             // button11
             // 
-            button11.Location = new Point(3, 532);
+            button11.Location = new Point(3, 520);
             button11.Name = "button11";
-            button11.Size = new Size(244, 29);
+            button11.Size = new Size(244, 41);
             button11.TabIndex = 6;
             button11.Text = "button11";
             button11.UseVisualStyleBackColor = true;
