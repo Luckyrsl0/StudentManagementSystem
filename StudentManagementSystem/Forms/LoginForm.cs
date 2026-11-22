@@ -10,6 +10,7 @@ namespace StudentManagementSystem
         public LoginForm()
         {
             InitializeComponent();
+            this.AcceptButton = loginBtn; 
         }
 
         private void eyeIcon_Click(object sender, EventArgs e)

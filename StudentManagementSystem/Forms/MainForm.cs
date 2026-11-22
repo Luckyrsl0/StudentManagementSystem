@@ -27,7 +27,10 @@ namespace StudentManagementSystem.Forms
 
         private void logoutBtn_Click(object sender, EventArgs e)
         {
-
+            LoginForm login = new LoginForm();
+            login.FormClosed += (s, args) => Application.Exit();
+            login.Show();
+            this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
