@@ -21,5 +21,23 @@ namespace StudentManagementSystem.Forms
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
         }
+
+        private void filterText_Enter(object sender, EventArgs e)
+        {
+            if (filterText.Text == "Search")
+            {
+                filterText.Text = "";
+                filterText.ForeColor = Color.FromArgb(19, 99, 212);
+            }
+        }
+
+        private void filterText_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(filterText.Text))
+            {
+                filterText.Text = "Search";
+                filterText.ForeColor = Color.Silver;
+            }
+        }
     }
 }
