@@ -29,35 +29,36 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label3 = new Label();
-            button5 = new Button();
+            helpBtn = new Button();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             panel2 = new Panel();
-            label2 = new Label();
-            TextBox = new TextBox();
-            button11 = new Button();
-            button10 = new Button();
-            button9 = new Button();
-            button8 = new Button();
-            button7 = new Button();
-            button6 = new Button();
+            panel6 = new Panel();
             panel5 = new Panel();
+            label2 = new Label();
+            filterText = new TextBox();
+            LogoutBtn = new Button();
+            userManageBtn = new Button();
+            enrollBtn = new Button();
+            courseBtn = new Button();
+            studentBtn = new Button();
+            addStudentBtn = new Button();
             panel3 = new Panel();
+            pictureBox1 = new PictureBox();
             Home = new Label();
             panel4 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.Highlight;
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(button5);
+            panel1.BackColor = Color.FromArgb(19, 99, 212);
+            panel1.Controls.Add(helpBtn);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
@@ -68,252 +69,323 @@
             panel1.Size = new Size(910, 50);
             panel1.TabIndex = 1;
             // 
-            // label3
+            // helpBtn
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(840, 20);
-            label3.Name = "label3";
-            label3.Size = new Size(43, 15);
-            label3.TabIndex = 5;
-            label3.Text = "Admin";
-            // 
-            // button5
-            // 
-            button5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.Location = new Point(461, 13);
-            button5.Margin = new Padding(3, 2, 3, 2);
-            button5.Name = "button5";
-            button5.Size = new Size(82, 22);
-            button5.TabIndex = 4;
-            button5.Text = "Help";
-            button5.UseVisualStyleBackColor = true;
+            helpBtn.Cursor = Cursors.Hand;
+            helpBtn.FlatAppearance.BorderSize = 0;
+            helpBtn.FlatStyle = FlatStyle.Flat;
+            helpBtn.Font = new Font("Century Gothic", 9F);
+            helpBtn.ForeColor = Color.White;
+            helpBtn.Image = Properties.Resources.help;
+            helpBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            helpBtn.Location = new Point(514, 10);
+            helpBtn.Margin = new Padding(3, 2, 3, 2);
+            helpBtn.Name = "helpBtn";
+            helpBtn.Size = new Size(101, 32);
+            helpBtn.TabIndex = 4;
+            helpBtn.Text = "Help";
+            helpBtn.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
-            button4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(346, 13);
+            button4.Cursor = Cursors.Hand;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Century Gothic", 9F);
+            button4.ForeColor = Color.White;
+            button4.Image = Properties.Resources.person;
+            button4.ImageAlign = ContentAlignment.MiddleLeft;
+            button4.Location = new Point(416, 10);
             button4.Margin = new Padding(3, 2, 3, 2);
             button4.Name = "button4";
-            button4.Size = new Size(82, 22);
+            button4.Size = new Size(95, 32);
             button4.TabIndex = 3;
             button4.Text = "Users";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
-            button3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(240, 13);
+            button3.Cursor = Cursors.Hand;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Century Gothic", 9F);
+            button3.ForeColor = Color.White;
+            button3.Image = Properties.Resources.list;
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
+            button3.Location = new Point(278, 10);
             button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
-            button3.Size = new Size(82, 22);
+            button3.Size = new Size(134, 33);
             button3.TabIndex = 2;
-            button3.Text = "Enrollments\r\n";
-            button3.UseVisualStyleBackColor = true;
+            button3.Text = "Enrollments";
+            button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(130, 13);
+            button2.Cursor = Cursors.Hand;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Century Gothic", 9F);
+            button2.ForeColor = Color.White;
+            button2.Image = Properties.Resources.book;
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(154, 10);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(82, 22);
+            button2.Size = new Size(118, 32);
             button2.TabIndex = 1;
             button2.Text = "Courses";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(28, 13);
+            button1.BackColor = Color.FromArgb(19, 99, 212);
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Image = Properties.Resources.people;
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(28, 10);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(82, 22);
+            button1.Size = new Size(120, 32);
             button1.TabIndex = 0;
             button1.Text = "Student";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
             panel2.BackColor = SystemColors.InactiveBorder;
+            panel2.Controls.Add(panel6);
+            panel2.Controls.Add(panel5);
             panel2.Controls.Add(label2);
-            panel2.Controls.Add(TextBox);
-            panel2.Controls.Add(button11);
-            panel2.Controls.Add(button10);
-            panel2.Controls.Add(button9);
-            panel2.Controls.Add(button8);
-            panel2.Controls.Add(button7);
-            panel2.Controls.Add(button6);
-            panel2.Location = new Point(19, 50);
+            panel2.Controls.Add(filterText);
+            panel2.Controls.Add(LogoutBtn);
+            panel2.Controls.Add(userManageBtn);
+            panel2.Controls.Add(enrollBtn);
+            panel2.Controls.Add(courseBtn);
+            panel2.Controls.Add(studentBtn);
+            panel2.Controls.Add(addStudentBtn);
+            panel2.Location = new Point(19, 46);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(219, 431);
+            panel2.Size = new Size(219, 448);
             panel2.TabIndex = 2;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.FromArgb(212, 212, 212);
+            panel6.Location = new Point(11, 376);
+            panel6.Margin = new Padding(3, 2, 3, 2);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(200, 1);
+            panel6.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.FromArgb(212, 212, 212);
+            panel5.Location = new Point(11, 125);
+            panel5.Margin = new Padding(3, 2, 3, 2);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(200, 1);
+            panel5.TabIndex = 0;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(107, 103, 103);
             label2.Location = new Point(11, 136);
             label2.Name = "label2";
-            label2.Size = new Size(53, 15);
+            label2.Size = new Size(57, 16);
             label2.TabIndex = 8;
             label2.Text = "Modules";
             // 
-            // TextBox
+            // filterText
             // 
-            TextBox.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            TextBox.ForeColor = SystemColors.WindowText;
-            TextBox.Location = new Point(16, 73);
-            TextBox.Margin = new Padding(3, 2, 3, 2);
-            TextBox.Name = "TextBox";
-            TextBox.Size = new Size(186, 23);
-            TextBox.TabIndex = 7;
-            TextBox.Text = "Search";
-            TextBox.TextAlign = HorizontalAlignment.Center;
-            TextBox.TextChanged += TextBox_TextChanged;
+            filterText.Cursor = Cursors.Hand;
+            filterText.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            filterText.ForeColor = Color.FromArgb(19, 99, 212);
+            filterText.Location = new Point(16, 73);
+            filterText.Margin = new Padding(3, 2, 3, 2);
+            filterText.Multiline = true;
+            filterText.Name = "filterText";
+            filterText.Size = new Size(186, 34);
+            filterText.TabIndex = 7;
             // 
-            // button11
+            // LogoutBtn
             // 
-            button11.BackColor = SystemColors.HighlightText;
-            button11.FlatAppearance.BorderColor = Color.Red;
-            button11.FlatAppearance.BorderSize = 10;
-            button11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button11.ForeColor = Color.Red;
-            button11.Location = new Point(3, 390);
-            button11.Margin = new Padding(3, 2, 3, 2);
-            button11.Name = "button11";
-            button11.Size = new Size(214, 31);
-            button11.TabIndex = 6;
-            button11.Text = "Log Out";
-            button11.UseVisualStyleBackColor = false;
+            LogoutBtn.BackColor = Color.IndianRed;
+            LogoutBtn.Cursor = Cursors.Hand;
+            LogoutBtn.FlatAppearance.BorderColor = Color.Red;
+            LogoutBtn.FlatAppearance.BorderSize = 0;
+            LogoutBtn.FlatStyle = FlatStyle.Flat;
+            LogoutBtn.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LogoutBtn.ForeColor = Color.White;
+            LogoutBtn.Image = Properties.Resources.logout;
+            LogoutBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            LogoutBtn.Location = new Point(11, 382);
+            LogoutBtn.Margin = new Padding(3, 2, 3, 2);
+            LogoutBtn.Name = "LogoutBtn";
+            LogoutBtn.Size = new Size(199, 39);
+            LogoutBtn.TabIndex = 6;
+            LogoutBtn.Text = "Log Out";
+            LogoutBtn.UseVisualStyleBackColor = false;
+            LogoutBtn.Click += LogoutBtn_Click;
             // 
-            // button10
+            // userManageBtn
             // 
-            button10.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button10.Location = new Point(16, 290);
-            button10.Margin = new Padding(3, 2, 3, 2);
-            button10.Name = "button10";
-            button10.Size = new Size(186, 36);
-            button10.TabIndex = 5;
-            button10.Text = "User Management";
-            button10.TextAlign = ContentAlignment.MiddleLeft;
-            button10.UseVisualStyleBackColor = true;
+            userManageBtn.BackColor = Color.RoyalBlue;
+            userManageBtn.Cursor = Cursors.Hand;
+            userManageBtn.FlatAppearance.BorderSize = 0;
+            userManageBtn.FlatStyle = FlatStyle.Flat;
+            userManageBtn.Font = new Font("Century Gothic", 9F);
+            userManageBtn.ForeColor = Color.White;
+            userManageBtn.Image = Properties.Resources.people;
+            userManageBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            userManageBtn.Location = new Point(16, 290);
+            userManageBtn.Margin = new Padding(3, 2, 3, 2);
+            userManageBtn.Name = "userManageBtn";
+            userManageBtn.Size = new Size(186, 36);
+            userManageBtn.TabIndex = 5;
+            userManageBtn.Text = "User Management";
+            userManageBtn.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // enrollBtn
             // 
-            button9.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button9.Location = new Point(16, 247);
-            button9.Margin = new Padding(3, 2, 3, 2);
-            button9.Name = "button9";
-            button9.Size = new Size(186, 39);
-            button9.TabIndex = 4;
-            button9.Text = "Enrollments";
-            button9.TextAlign = ContentAlignment.MiddleLeft;
-            button9.UseVisualStyleBackColor = true;
-            button9.Click += button9_Click;
+            enrollBtn.BackColor = Color.RoyalBlue;
+            enrollBtn.Cursor = Cursors.Hand;
+            enrollBtn.FlatAppearance.BorderSize = 0;
+            enrollBtn.FlatStyle = FlatStyle.Flat;
+            enrollBtn.Font = new Font("Century Gothic", 9F);
+            enrollBtn.ForeColor = Color.White;
+            enrollBtn.Image = Properties.Resources.list;
+            enrollBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            enrollBtn.Location = new Point(16, 247);
+            enrollBtn.Margin = new Padding(3, 2, 3, 2);
+            enrollBtn.Name = "enrollBtn";
+            enrollBtn.Size = new Size(186, 39);
+            enrollBtn.TabIndex = 4;
+            enrollBtn.Text = "Enrollments";
+            enrollBtn.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // courseBtn
             // 
-            button8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button8.Location = new Point(16, 208);
-            button8.Margin = new Padding(3, 2, 3, 2);
-            button8.Name = "button8";
-            button8.Size = new Size(186, 35);
-            button8.TabIndex = 3;
-            button8.Text = "Courses";
-            button8.TextAlign = ContentAlignment.MiddleLeft;
-            button8.UseVisualStyleBackColor = true;
-            button8.Click += button8_Click;
+            courseBtn.BackColor = Color.RoyalBlue;
+            courseBtn.Cursor = Cursors.Hand;
+            courseBtn.FlatAppearance.BorderSize = 0;
+            courseBtn.FlatStyle = FlatStyle.Flat;
+            courseBtn.Font = new Font("Century Gothic", 9F);
+            courseBtn.ForeColor = Color.White;
+            courseBtn.Image = Properties.Resources.book;
+            courseBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            courseBtn.Location = new Point(16, 208);
+            courseBtn.Margin = new Padding(3, 2, 3, 2);
+            courseBtn.Name = "courseBtn";
+            courseBtn.Size = new Size(186, 35);
+            courseBtn.TabIndex = 3;
+            courseBtn.Text = "Courses";
+            courseBtn.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // studentBtn
             // 
-            button7.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button7.Location = new Point(16, 169);
-            button7.Margin = new Padding(3, 2, 3, 2);
-            button7.Name = "button7";
-            button7.Size = new Size(186, 35);
-            button7.TabIndex = 2;
-            button7.Text = "Student";
-            button7.TextAlign = ContentAlignment.MiddleLeft;
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
+            studentBtn.BackColor = Color.RoyalBlue;
+            studentBtn.Cursor = Cursors.Hand;
+            studentBtn.FlatAppearance.BorderSize = 0;
+            studentBtn.FlatStyle = FlatStyle.Flat;
+            studentBtn.Font = new Font("Century Gothic", 9F);
+            studentBtn.ForeColor = Color.White;
+            studentBtn.Image = Properties.Resources.people;
+            studentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            studentBtn.Location = new Point(16, 169);
+            studentBtn.Margin = new Padding(3, 2, 3, 2);
+            studentBtn.Name = "studentBtn";
+            studentBtn.Size = new Size(186, 35);
+            studentBtn.TabIndex = 2;
+            studentBtn.Text = "Student";
+            studentBtn.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // addStudentBtn
             // 
-            button6.BackColor = SystemColors.MenuHighlight;
-            button6.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button6.ImageKey = "(none)";
-            button6.Location = new Point(16, 31);
-            button6.Margin = new Padding(3, 2, 3, 2);
-            button6.Name = "button6";
-            button6.Size = new Size(186, 38);
-            button6.TabIndex = 1;
-            button6.Text = "New Student";
-            button6.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
-            // 
-            // panel5
-            // 
-            panel5.Location = new Point(19, 176);
-            panel5.Margin = new Padding(3, 2, 3, 2);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(219, 8);
-            panel5.TabIndex = 0;
+            addStudentBtn.BackColor = Color.FromArgb(19, 99, 212);
+            addStudentBtn.Cursor = Cursors.Hand;
+            addStudentBtn.FlatStyle = FlatStyle.Flat;
+            addStudentBtn.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            addStudentBtn.ForeColor = Color.White;
+            addStudentBtn.Image = Properties.Resources.add;
+            addStudentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            addStudentBtn.Location = new Point(16, 31);
+            addStudentBtn.Margin = new Padding(3, 2, 3, 2);
+            addStudentBtn.Name = "addStudentBtn";
+            addStudentBtn.Size = new Size(186, 38);
+            addStudentBtn.TabIndex = 1;
+            addStudentBtn.Text = "New Student";
+            addStudentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            addStudentBtn.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
             panel3.BackColor = SystemColors.InactiveBorder;
+            panel3.Controls.Add(pictureBox1);
             panel3.Controls.Add(Home);
             panel3.Controls.Add(panel4);
-            panel3.Location = new Point(255, 61);
+            panel3.Location = new Point(253, 53);
             panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
             panel3.Size = new Size(633, 421);
             panel3.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.FromArgb(19, 99, 212);
+            pictureBox1.Image = Properties.Resources.home_filled;
+            pictureBox1.Location = new Point(15, 11);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(33, 31);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            // 
             // Home
             // 
             Home.AutoSize = true;
-            Home.Location = new Point(31, 22);
+            Home.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Home.Location = new Point(54, 11);
             Home.Name = "Home";
             Home.RightToLeft = RightToLeft.Yes;
-            Home.Size = new Size(40, 15);
+            Home.Size = new Size(52, 18);
             Home.TabIndex = 1;
             Home.Text = "Home";
-            Home.Click += label1_Click_1;
             // 
             // panel4
             // 
-            panel4.BackColor = SystemColors.InactiveBorder;
-            panel4.Location = new Point(31, 52);
+            panel4.BackColor = Color.RoyalBlue;
+            panel4.Location = new Point(29, 62);
             panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(577, 347);
+            panel4.Size = new Size(579, 337);
             panel4.TabIndex = 0;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.MenuBar;
+            BackColor = Color.FromArgb(222, 222, 222);
             ClientSize = new Size(898, 480);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(panel5);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainForm";
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -323,21 +395,21 @@
         private Panel panel5;
         private Panel panel3;
         private Panel panel4;
-        private Button button5;
+        private Button helpBtn;
         private Button button4;
         private Button button3;
         private Button button2;
         private Button button1;
-        private Button button11;
-        private Button button10;
-        private Button button9;
-        private Button button8;
-        private Button button7;
-        private Button button6;
-        private Label label3;
+        private Button LogoutBtn;
+        private Button userManageBtn;
+        private Button enrollBtn;
+        private Button courseBtn;
+        private Button studentBtn;
+        private Button addStudentBtn;
         private Label label2;
-        private TextBox TextBox;
+        private TextBox filterText;
         private Label Home;
         private PictureBox pictureBox1;
+        private Panel panel6;
     }
 }

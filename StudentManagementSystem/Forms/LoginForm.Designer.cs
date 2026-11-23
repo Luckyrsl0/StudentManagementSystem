@@ -131,7 +131,7 @@
             // 
             txtUsername.BackColor = SystemColors.Control;
             txtUsername.BorderStyle = BorderStyle.None;
-            txtUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsername.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUsername.ForeColor = SystemColors.Highlight;
             txtUsername.Location = new Point(97, 272);
             txtUsername.Multiline = true;
@@ -143,11 +143,11 @@
             // 
             txtPassword.BackColor = SystemColors.Control;
             txtPassword.BorderStyle = BorderStyle.None;
-            txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPassword.ForeColor = SystemColors.Highlight;
             txtPassword.Location = new Point(94, 346);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(249, 22);
+            txtPassword.Size = new Size(249, 20);
             txtPassword.TabIndex = 8;
             txtPassword.UseSystemPasswordChar = true;
             // 
