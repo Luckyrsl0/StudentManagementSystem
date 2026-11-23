@@ -93,6 +93,16 @@ namespace StudentManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Rounded_White_Plus_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Rounded White Plus Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ShowEyeIcon {
             get {
                 object obj = ResourceManager.GetObject("ShowEyeIcon", resourceCulture);
