@@ -21,5 +21,15 @@ namespace StudentManagementSystem.Forms
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
         }
+
+        private void Usebutton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
