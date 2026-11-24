@@ -364,3 +364,7 @@ FodyWeavers.xsd
 
 # Local MySQL credentials
 Secrets.config
+
+# Ignore local database files and SQL scripts
+Database/
+database/
