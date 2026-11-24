@@ -10,7 +10,7 @@ namespace StudentManagementSystem
         public LoginForm()
         {
             InitializeComponent();
-            this.AcceptButton = loginBtn; 
+            this.AcceptButton = loginBtn;
         }
 
         private void eyeIcon_Click(object sender, EventArgs e)
@@ -46,19 +46,49 @@ namespace StudentManagementSystem
             }
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void loginLabel_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void ExitLabel_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtUsername_Enter(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "Username")
+            {
+                txtUsername.Text = "";
+                txtUsername.ForeColor = Color.FromArgb(19, 99, 212);
+            }
+        }
+
+        private void txtUsername_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                txtUsername.Text = "Username";
+                txtUsername.ForeColor = Color.Silver;
+            }
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "Password")
+            {
+                txtPassword.Text = "";
+                txtPassword.ForeColor = Color.FromArgb(19, 99, 212);
+                txtPassword.UseSystemPasswordChar = true; // Mask the password when user starts typing
+            }
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                txtPassword.Text = "Password";
+                txtPassword.ForeColor = Color.Silver;
+                txtPassword.UseSystemPasswordChar = false; // Show the placeholder text when the field is empty
+            }
         }
     }
 }

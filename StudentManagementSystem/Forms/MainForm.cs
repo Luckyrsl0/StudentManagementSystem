@@ -22,6 +22,7 @@ namespace StudentManagementSystem.Forms
             loginForm.Show();
         }
 
+
         private void Usebutton4_Click(object sender, EventArgs e)
         {
 
@@ -29,7 +30,25 @@ namespace StudentManagementSystem.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+        
+        }
+        private void filterText_Enter(object sender, EventArgs e)
+        {
+            if (filterText.Text == "Search")
+            {
+                filterText.Text = "";
+                filterText.ForeColor = Color.FromArgb(19, 99, 212);
+            }
+        }
 
+        private void filterText_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(filterText.Text))
+            {
+                filterText.Text = "Search";
+                filterText.ForeColor = Color.Silver;
+            }
+ 
         }
     }
 }

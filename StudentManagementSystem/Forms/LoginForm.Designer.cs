@@ -125,31 +125,35 @@
             loginLabel.TabIndex = 6;
             loginLabel.Text = "LOG IN";
             loginLabel.TextAlign = ContentAlignment.MiddleCenter;
-            loginLabel.Click += loginLabel_Click;
             // 
             // txtUsername
             // 
             txtUsername.BackColor = SystemColors.Control;
             txtUsername.BorderStyle = BorderStyle.None;
             txtUsername.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.ForeColor = SystemColors.Highlight;
+            txtUsername.ForeColor = Color.Silver;
             txtUsername.Location = new Point(97, 272);
             txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(249, 22);
             txtUsername.TabIndex = 7;
+            txtUsername.Text = "Username";
+            txtUsername.Enter += txtUsername_Enter;
+            txtUsername.Leave += txtUsername_Leave;
             // 
             // txtPassword
             // 
             txtPassword.BackColor = SystemColors.Control;
             txtPassword.BorderStyle = BorderStyle.None;
             txtPassword.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.ForeColor = SystemColors.Highlight;
+            txtPassword.ForeColor = Color.Silver;
             txtPassword.Location = new Point(94, 346);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(249, 20);
             txtPassword.TabIndex = 8;
-            txtPassword.UseSystemPasswordChar = true;
+            txtPassword.Text = "Password";
+            txtPassword.Enter += txtPassword_Enter;
+            txtPassword.Leave += txtPassword_Leave;
             // 
             // ExitLabel
             // 
@@ -185,7 +189,6 @@
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
-            Load += LoginForm_Load;
             ((System.ComponentModel.ISupportInitialize)logoImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)personIcon).EndInit();
             ((System.ComponentModel.ISupportInitialize)eyeIcon).EndInit();
