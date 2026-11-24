@@ -23,4 +23,15 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MySqlConnector" Version="3.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="11.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Secrets.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
