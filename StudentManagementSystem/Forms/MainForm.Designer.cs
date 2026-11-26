@@ -63,10 +63,9 @@
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
-            panel1.Location = new Point(-9, -4);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Location = new Point(-10, -5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1023, 50);
+            panel1.Size = new Size(1169, 67);
             panel1.TabIndex = 1;
             // 
             // helpBtn
@@ -78,10 +77,9 @@
             helpBtn.ForeColor = Color.White;
             helpBtn.Image = Properties.Resources.help;
             helpBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            helpBtn.Location = new Point(514, 10);
-            helpBtn.Margin = new Padding(3, 2, 3, 2);
+            helpBtn.Location = new Point(587, 13);
             helpBtn.Name = "helpBtn";
-            helpBtn.Size = new Size(101, 32);
+            helpBtn.Size = new Size(115, 43);
             helpBtn.TabIndex = 4;
             helpBtn.Text = "Help";
             helpBtn.UseVisualStyleBackColor = false;
@@ -95,10 +93,9 @@
             button4.ForeColor = Color.White;
             button4.Image = Properties.Resources.person;
             button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(416, 10);
-            button4.Margin = new Padding(3, 2, 3, 2);
+            button4.Location = new Point(475, 13);
             button4.Name = "button4";
-            button4.Size = new Size(95, 32);
+            button4.Size = new Size(109, 43);
             button4.TabIndex = 3;
             button4.Text = "Users";
             button4.UseVisualStyleBackColor = false;
@@ -112,10 +109,9 @@
             button3.ForeColor = Color.White;
             button3.Image = Properties.Resources.list;
             button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(278, 10);
-            button3.Margin = new Padding(3, 2, 3, 2);
+            button3.Location = new Point(318, 13);
             button3.Name = "button3";
-            button3.Size = new Size(134, 33);
+            button3.Size = new Size(153, 44);
             button3.TabIndex = 2;
             button3.Text = "Enrollments";
             button3.UseVisualStyleBackColor = false;
@@ -129,10 +125,9 @@
             button2.ForeColor = Color.White;
             button2.Image = Properties.Resources.book;
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(154, 10);
-            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Location = new Point(176, 13);
             button2.Name = "button2";
-            button2.Size = new Size(118, 32);
+            button2.Size = new Size(135, 43);
             button2.TabIndex = 1;
             button2.Text = "Courses";
             button2.UseVisualStyleBackColor = false;
@@ -147,10 +142,9 @@
             button1.ForeColor = Color.White;
             button1.Image = Properties.Resources.people;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(28, 10);
-            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Location = new Point(32, 13);
             button1.Name = "button1";
-            button1.Size = new Size(120, 32);
+            button1.Size = new Size(137, 43);
             button1.TabIndex = 0;
             button1.Text = "Student";
             button1.UseVisualStyleBackColor = false;
@@ -168,28 +162,25 @@
             panel2.Controls.Add(courseBtn);
             panel2.Controls.Add(studentBtn);
             panel2.Controls.Add(addStudentBtn);
-            panel2.Location = new Point(19, 46);
-            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Location = new Point(22, 61);
             panel2.Name = "panel2";
-            panel2.Size = new Size(266, 448);
+            panel2.Size = new Size(304, 597);
             panel2.TabIndex = 2;
             // 
             // panel6
             // 
             panel6.BackColor = Color.FromArgb(212, 212, 212);
-            panel6.Location = new Point(11, 376);
-            panel6.Margin = new Padding(3, 2, 3, 2);
+            panel6.Location = new Point(13, 501);
             panel6.Name = "panel6";
-            panel6.Size = new Size(245, 1);
+            panel6.Size = new Size(280, 1);
             panel6.TabIndex = 1;
             // 
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(212, 212, 212);
-            panel5.Location = new Point(11, 125);
-            panel5.Margin = new Padding(3, 2, 3, 2);
+            panel5.Location = new Point(13, 167);
             panel5.Name = "panel5";
-            panel5.Size = new Size(245, 1);
+            panel5.Size = new Size(280, 1);
             panel5.TabIndex = 0;
             // 
             // label2
@@ -197,9 +188,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(107, 103, 103);
-            label2.Location = new Point(11, 136);
+            label2.Location = new Point(13, 181);
             label2.Name = "label2";
-            label2.Size = new Size(57, 16);
+            label2.Size = new Size(71, 18);
             label2.TabIndex = 8;
             label2.Text = "Modules";
             // 
@@ -208,11 +199,10 @@
             filterText.Cursor = Cursors.Hand;
             filterText.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             filterText.ForeColor = Color.Silver;
-            filterText.Location = new Point(16, 73);
-            filterText.Margin = new Padding(3, 2, 3, 2);
+            filterText.Location = new Point(18, 97);
             filterText.Multiline = true;
             filterText.Name = "filterText";
-            filterText.Size = new Size(238, 34);
+            filterText.Size = new Size(271, 44);
             filterText.TabIndex = 7;
             filterText.Text = "Search";
             filterText.Enter += filterText_Enter;
@@ -229,10 +219,9 @@
             LogoutBtn.ForeColor = Color.White;
             LogoutBtn.Image = Properties.Resources.logout;
             LogoutBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            LogoutBtn.Location = new Point(16, 384);
-            LogoutBtn.Margin = new Padding(3, 2, 3, 2);
+            LogoutBtn.Location = new Point(18, 512);
             LogoutBtn.Name = "LogoutBtn";
-            LogoutBtn.Size = new Size(238, 39);
+            LogoutBtn.Size = new Size(272, 52);
             LogoutBtn.TabIndex = 6;
             LogoutBtn.Text = "Log Out";
             LogoutBtn.UseVisualStyleBackColor = false;
@@ -248,10 +237,9 @@
             userManageBtn.ForeColor = Color.White;
             userManageBtn.Image = Properties.Resources.people;
             userManageBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            userManageBtn.Location = new Point(16, 290);
-            userManageBtn.Margin = new Padding(3, 2, 3, 2);
+            userManageBtn.Location = new Point(18, 387);
             userManageBtn.Name = "userManageBtn";
-            userManageBtn.Size = new Size(238, 36);
+            userManageBtn.Size = new Size(272, 48);
             userManageBtn.TabIndex = 5;
             userManageBtn.Text = "User Management";
             userManageBtn.UseVisualStyleBackColor = false;
@@ -266,10 +254,9 @@
             enrollBtn.ForeColor = Color.White;
             enrollBtn.Image = Properties.Resources.list;
             enrollBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            enrollBtn.Location = new Point(16, 247);
-            enrollBtn.Margin = new Padding(3, 2, 3, 2);
+            enrollBtn.Location = new Point(18, 329);
             enrollBtn.Name = "enrollBtn";
-            enrollBtn.Size = new Size(238, 39);
+            enrollBtn.Size = new Size(272, 52);
             enrollBtn.TabIndex = 4;
             enrollBtn.Text = "Enrollments";
             enrollBtn.UseVisualStyleBackColor = false;
@@ -284,10 +271,9 @@
             courseBtn.ForeColor = Color.White;
             courseBtn.Image = Properties.Resources.book;
             courseBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            courseBtn.Location = new Point(16, 208);
-            courseBtn.Margin = new Padding(3, 2, 3, 2);
+            courseBtn.Location = new Point(18, 277);
             courseBtn.Name = "courseBtn";
-            courseBtn.Size = new Size(238, 35);
+            courseBtn.Size = new Size(272, 47);
             courseBtn.TabIndex = 3;
             courseBtn.Text = "Courses";
             courseBtn.UseVisualStyleBackColor = false;
@@ -302,10 +288,9 @@
             studentBtn.ForeColor = Color.White;
             studentBtn.Image = Properties.Resources.people;
             studentBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            studentBtn.Location = new Point(16, 169);
-            studentBtn.Margin = new Padding(3, 2, 3, 2);
+            studentBtn.Location = new Point(18, 225);
             studentBtn.Name = "studentBtn";
-            studentBtn.Size = new Size(238, 35);
+            studentBtn.Size = new Size(272, 47);
             studentBtn.TabIndex = 2;
             studentBtn.Text = "Student";
             studentBtn.UseVisualStyleBackColor = false;
@@ -319,10 +304,9 @@
             addStudentBtn.ForeColor = Color.White;
             addStudentBtn.Image = Properties.Resources.add;
             addStudentBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            addStudentBtn.Location = new Point(16, 31);
-            addStudentBtn.Margin = new Padding(3, 2, 3, 2);
+            addStudentBtn.Location = new Point(18, 41);
             addStudentBtn.Name = "addStudentBtn";
-            addStudentBtn.Size = new Size(238, 38);
+            addStudentBtn.Size = new Size(272, 51);
             addStudentBtn.TabIndex = 1;
             addStudentBtn.Text = "New Student";
             addStudentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -334,19 +318,19 @@
             panel3.Controls.Add(pictureBox1);
             panel3.Controls.Add(Home);
             panel3.Controls.Add(panel4);
-            panel3.Location = new Point(291, 50);
-            panel3.Margin = new Padding(3, 2, 3, 2);
+            panel3.Location = new Point(333, 67);
             panel3.Name = "panel3";
-            panel3.Size = new Size(703, 421);
+            panel3.Size = new Size(803, 561);
             panel3.TabIndex = 3;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.FromArgb(19, 99, 212);
             pictureBox1.Image = Properties.Resources.home_filled;
-            pictureBox1.Location = new Point(15, 11);
+            pictureBox1.Location = new Point(17, 15);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(33, 31);
+            pictureBox1.Size = new Size(38, 41);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -355,31 +339,31 @@
             // 
             Home.AutoSize = true;
             Home.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Home.Location = new Point(54, 11);
+            Home.Location = new Point(62, 15);
             Home.Name = "Home";
             Home.RightToLeft = RightToLeft.Yes;
-            Home.Size = new Size(52, 18);
+            Home.Size = new Size(65, 23);
             Home.TabIndex = 1;
             Home.Text = "Home";
             // 
             // panel4
             // 
             panel4.BackColor = Color.RoyalBlue;
-            panel4.Location = new Point(29, 62);
-            panel4.Margin = new Padding(3, 2, 3, 2);
+            panel4.Location = new Point(33, 83);
             panel4.Name = "panel4";
-            panel4.Size = new Size(647, 337);
+            panel4.Size = new Size(739, 449);
             panel4.TabIndex = 0;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(222, 222, 222);
-            ClientSize = new Size(1006, 480);
+            ClientSize = new Size(1150, 640);
+            Controls.Add(panel1);
             Controls.Add(panel3);
             Controls.Add(panel2);
-            Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainForm";
