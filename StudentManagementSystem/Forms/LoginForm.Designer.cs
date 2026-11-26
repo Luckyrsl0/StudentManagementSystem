@@ -127,31 +127,28 @@
             txtUsername.BackColor = SystemColors.Control;
             txtUsername.BorderStyle = BorderStyle.None;
             txtUsername.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.ForeColor = Color.Silver;
+            txtUsername.ForeColor = Color.FromArgb(19, 99, 212);
             txtUsername.Location = new Point(634, 84);
             txtUsername.Margin = new Padding(3, 4, 3, 4);
             txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(285, 29);
             txtUsername.TabIndex = 7;
-            txtUsername.Text = "Username";
-            txtUsername.Enter += txtUsername_Enter;
-            txtUsername.Leave += txtUsername_Leave;
+            txtUsername.PlaceholderText = "Username";
             // 
             // txtPassword
             // 
             txtPassword.BackColor = SystemColors.Control;
             txtPassword.BorderStyle = BorderStyle.None;
             txtPassword.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.ForeColor = Color.Silver;
+            txtPassword.ForeColor = Color.FromArgb(19, 99, 212);
             txtPassword.Location = new Point(630, 182);
             txtPassword.Margin = new Padding(3, 4, 3, 4);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(285, 25);
             txtPassword.TabIndex = 8;
-            txtPassword.Text = "Password";
-            txtPassword.Enter += txtPassword_Enter;
-            txtPassword.Leave += txtPassword_Leave;
+            txtPassword.PlaceholderText = "Password";
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // ExitLabel
             // 

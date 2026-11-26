@@ -198,15 +198,13 @@
             // 
             filterText.Cursor = Cursors.Hand;
             filterText.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            filterText.ForeColor = Color.Silver;
+            filterText.ForeColor = Color.FromArgb(19, 99, 212); 
             filterText.Location = new Point(18, 97);
             filterText.Multiline = true;
             filterText.Name = "filterText";
             filterText.Size = new Size(271, 44);
             filterText.TabIndex = 7;
-            filterText.Text = "Search";
-            filterText.Enter += filterText_Enter;
-            filterText.Leave += filterText_Leave;
+            filterText.PlaceholderText = "Search";
             // 
             // LogoutBtn
             // 
