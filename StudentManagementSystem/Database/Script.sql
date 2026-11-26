@@ -8,4 +8,6 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (username, passwordHash, role)
-VALUES ('admin', 'admin1234', 'Admin');
+VALUES 
+	('admin', 'admin1234', 'Admin'),
+	('staff', 'staff1234', 'Staff');
