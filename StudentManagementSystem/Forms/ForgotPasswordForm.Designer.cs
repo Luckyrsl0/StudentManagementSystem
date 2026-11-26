@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             panel3 = new Panel();
-            ExitLabel = new Label();
-            txtUsername = new TextBox();
+            backLabel = new Label();
             continueBtn = new Button();
-            panel1 = new Panel();
-            personIcon = new PictureBox();
             logoImage = new PictureBox();
             label1 = new Label();
             label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)personIcon).BeginInit();
+            panel1 = new Panel();
+            txtUsername = new TextBox();
+            personIcon = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)logoImage).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)personIcon).BeginInit();
             SuspendLayout();
             // 
             // panel3
@@ -50,32 +50,18 @@
             panel3.Size = new Size(2, 322);
             panel3.TabIndex = 21;
             // 
-            // ExitLabel
+            // backLabel
             // 
-            ExitLabel.AutoSize = true;
-            ExitLabel.Cursor = Cursors.Hand;
-            ExitLabel.FlatStyle = FlatStyle.Flat;
-            ExitLabel.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ExitLabel.ForeColor = Color.Black;
-            ExitLabel.Location = new Point(670, 344);
-            ExitLabel.Name = "ExitLabel";
-            ExitLabel.Size = new Size(173, 30);
-            ExitLabel.TabIndex = 20;
-            ExitLabel.Text = "Back to Login";
-            // 
-            // txtUsername
-            // 
-            txtUsername.BackColor = SystemColors.Control;
-            txtUsername.BorderStyle = BorderStyle.None;
-            txtUsername.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.ForeColor = Color.Black;
-            txtUsername.Location = new Point(640, 206);
-            txtUsername.Margin = new Padding(3, 4, 3, 4);
-            txtUsername.Multiline = true;
-            txtUsername.Name = "txtUsername";
-            txtUsername.PlaceholderText = "Username";
-            txtUsername.Size = new Size(285, 29);
-            txtUsername.TabIndex = 18;
+            backLabel.AutoSize = true;
+            backLabel.Cursor = Cursors.Hand;
+            backLabel.FlatStyle = FlatStyle.Flat;
+            backLabel.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            backLabel.ForeColor = Color.Black;
+            backLabel.Location = new Point(670, 344);
+            backLabel.Name = "backLabel";
+            backLabel.Size = new Size(173, 30);
+            backLabel.TabIndex = 20;
+            backLabel.Text = "Back to Login";
             // 
             // continueBtn
             // 
@@ -90,23 +76,6 @@
             continueBtn.TabIndex = 16;
             continueBtn.Text = "Continue";
             continueBtn.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.HotTrack;
-            panel1.Location = new Point(579, 244);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(342, 3);
-            panel1.TabIndex = 13;
-            // 
-            // personIcon
-            // 
-            personIcon.Location = new Point(579, 198);
-            personIcon.Name = "personIcon";
-            personIcon.Size = new Size(50, 41);
-            personIcon.SizeMode = PictureBoxSizeMode.Zoom;
-            personIcon.TabIndex = 12;
-            personIcon.TabStop = false;
             // 
             // logoImage
             // 
@@ -141,6 +110,37 @@
             label2.TabIndex = 23;
             label2.Text = "caption";
             // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.HotTrack;
+            panel1.Location = new Point(579, 244);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(342, 3);
+            panel1.TabIndex = 13;
+            // 
+            // txtUsername
+            // 
+            txtUsername.BackColor = SystemColors.Control;
+            txtUsername.BorderStyle = BorderStyle.None;
+            txtUsername.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsername.ForeColor = Color.Black;
+            txtUsername.Location = new Point(640, 206);
+            txtUsername.Margin = new Padding(3, 4, 3, 4);
+            txtUsername.Multiline = true;
+            txtUsername.Name = "txtUsername";
+            txtUsername.PlaceholderText = "Username";
+            txtUsername.Size = new Size(285, 29);
+            txtUsername.TabIndex = 18;
+            // 
+            // personIcon
+            // 
+            personIcon.Location = new Point(579, 198);
+            personIcon.Name = "personIcon";
+            personIcon.Size = new Size(50, 41);
+            personIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            personIcon.TabIndex = 12;
+            personIcon.TabStop = false;
+            // 
             // ForgotPasswordForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -149,7 +149,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(panel3);
-            Controls.Add(ExitLabel);
+            Controls.Add(backLabel);
             Controls.Add(txtUsername);
             Controls.Add(continueBtn);
             Controls.Add(panel1);
@@ -159,8 +159,8 @@
             Name = "ForgotPasswordForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ForgotPasswordForm";
-            ((System.ComponentModel.ISupportInitialize)personIcon).EndInit();
             ((System.ComponentModel.ISupportInitialize)logoImage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)personIcon).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -168,13 +168,13 @@
         #endregion
 
         private Panel panel3;
-        private Label ExitLabel;
-        private TextBox txtUsername;
+        private Label backLabel;
         private Button continueBtn;
-        private Panel panel1;
-        private PictureBox personIcon;
         private PictureBox logoImage;
         private Label label1;
         private Label label2;
+        private Panel panel1;
+        private TextBox txtUsername;
+        private PictureBox personIcon;
     }
 }
