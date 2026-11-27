@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             panel3 = new Panel();
-            backLabel = new Label();
-            continueBtn = new Button();
+            backToLoginLink = new Label();
+            btnVerifyUsername = new Button();
             logoImage = new PictureBox();
             label1 = new Label();
             label2 = new Label();
@@ -51,33 +51,35 @@
             panel3.Size = new Size(2, 242);
             panel3.TabIndex = 21;
             // 
-            // backLabel
+            // backToLoginLink
             // 
-            backLabel.AutoSize = true;
-            backLabel.Cursor = Cursors.Hand;
-            backLabel.FlatStyle = FlatStyle.Flat;
-            backLabel.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            backLabel.ForeColor = SystemColors.Highlight;
-            backLabel.Location = new Point(591, 258);
-            backLabel.Name = "backLabel";
-            backLabel.Size = new Size(134, 22);
-            backLabel.TabIndex = 20;
-            backLabel.Text = "Back to Login";
+            backToLoginLink.AutoSize = true;
+            backToLoginLink.Cursor = Cursors.Hand;
+            backToLoginLink.FlatStyle = FlatStyle.Flat;
+            backToLoginLink.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            backToLoginLink.ForeColor = SystemColors.Highlight;
+            backToLoginLink.Location = new Point(591, 258);
+            backToLoginLink.Name = "backToLoginLink";
+            backToLoginLink.Size = new Size(134, 22);
+            backToLoginLink.TabIndex = 20;
+            backToLoginLink.Text = "Back to Login";
+            backToLoginLink.Click += backToLoginLink_Click;
             // 
-            // continueBtn
+            // btnVerifyUsername
             // 
-            continueBtn.BackColor = SystemColors.HotTrack;
-            continueBtn.Cursor = Cursors.Hand;
-            continueBtn.FlatStyle = FlatStyle.Flat;
-            continueBtn.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            continueBtn.ForeColor = SystemColors.HighlightText;
-            continueBtn.Location = new Point(552, 207);
-            continueBtn.Margin = new Padding(3, 2, 3, 2);
-            continueBtn.Name = "continueBtn";
-            continueBtn.Size = new Size(219, 49);
-            continueBtn.TabIndex = 16;
-            continueBtn.Text = "Continue";
-            continueBtn.UseVisualStyleBackColor = false;
+            btnVerifyUsername.BackColor = SystemColors.HotTrack;
+            btnVerifyUsername.Cursor = Cursors.Hand;
+            btnVerifyUsername.FlatStyle = FlatStyle.Flat;
+            btnVerifyUsername.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVerifyUsername.ForeColor = SystemColors.HighlightText;
+            btnVerifyUsername.Location = new Point(552, 207);
+            btnVerifyUsername.Margin = new Padding(3, 2, 3, 2);
+            btnVerifyUsername.Name = "btnVerifyUsername";
+            btnVerifyUsername.Size = new Size(219, 49);
+            btnVerifyUsername.TabIndex = 16;
+            btnVerifyUsername.Text = "Continue";
+            btnVerifyUsername.UseVisualStyleBackColor = false;
+            btnVerifyUsername.Click += btnVerifyUsername_Click;
             // 
             // logoImage
             // 
@@ -154,9 +156,9 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(panel3);
-            Controls.Add(backLabel);
+            Controls.Add(backToLoginLink);
             Controls.Add(txtUsername);
-            Controls.Add(continueBtn);
+            Controls.Add(btnVerifyUsername);
             Controls.Add(panel1);
             Controls.Add(personIcon);
             Controls.Add(logoImage);
@@ -175,8 +177,8 @@
         #endregion
 
         private Panel panel3;
-        private Label backLabel;
-        private Button continueBtn;
+        private Label backToLoginLink;
+        private Button btnVerifyUsername;
         private PictureBox logoImage;
         private Label label1;
         private Label label2;
