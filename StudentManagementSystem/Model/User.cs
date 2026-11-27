@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using BCrypt.Net;
 
 namespace StudentManagementSystem.Model
 {
@@ -25,13 +24,26 @@ namespace StudentManagementSystem.Model
 
         public bool Login(string pw)
         {
-            return this.passwordHash == pw;
+            if (string.IsNullOrEmpty(this.passwordHash))
+                return false;
+
+            try
+            {
+                return BCrypt.Net.BCrypt.Verify(pw, this.passwordHash);
+            }
+            catch (SaltParseException)
+            {
+                // Dili mo-crash kung plain text pa ang naa sa database
+                return false;
+            }
         }
 
         public bool ChangePassword(string oldPw, string newPw)
         {
-            if (this.passwordHash != oldPw) return false;
-            this.passwordHash = newPw;
+            if (!Login(oldPw))
+                return false;
+
+            this.passwordHash = BCrypt.Net.BCrypt.HashPassword(newPw);
             return true;
         }
 

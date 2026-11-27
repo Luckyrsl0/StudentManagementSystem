@@ -41,5 +41,25 @@ namespace StudentManagementSystem
 
             return null;
         }
+
+        // Automatic mo-hash gamit ang BCrypt before i-update sa MySQL
+        public bool UpdatePassword(string username, string newPlainPassword)
+        {
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(newPlainPassword);
+
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                conn.Open();
+                string query = "UPDATE users SET passwordHash = @passwordHash WHERE username = @username";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@passwordHash", hashedPassword);
+                    cmd.Parameters.AddWithValue("@username", username);
+
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
     }
 }
