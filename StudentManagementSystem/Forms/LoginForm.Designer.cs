@@ -39,7 +39,7 @@
             txtPassword = new TextBox();
             ExitLabel = new Label();
             panel3 = new Panel();
-            forgotLabel = new Label();
+            forgotPasswordLink = new Label();
             ((System.ComponentModel.ISupportInitialize)logoImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)personIcon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)eyeIcon).BeginInit();
@@ -177,24 +177,25 @@
             panel3.Size = new Size(2, 242);
             panel3.TabIndex = 10;
             // 
-            // forgotLabel
+            // forgotPasswordLink
             // 
-            forgotLabel.AutoSize = true;
-            forgotLabel.Cursor = Cursors.Hand;
-            forgotLabel.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            forgotLabel.ForeColor = SystemColors.MenuHighlight;
-            forgotLabel.Location = new Point(690, 170);
-            forgotLabel.Name = "forgotLabel";
-            forgotLabel.Size = new Size(105, 17);
-            forgotLabel.TabIndex = 11;
-            forgotLabel.Text = "Forgot Password";
+            forgotPasswordLink.AutoSize = true;
+            forgotPasswordLink.Cursor = Cursors.Hand;
+            forgotPasswordLink.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            forgotPasswordLink.ForeColor = SystemColors.MenuHighlight;
+            forgotPasswordLink.Location = new Point(690, 170);
+            forgotPasswordLink.Name = "forgotPasswordLink";
+            forgotPasswordLink.Size = new Size(105, 17);
+            forgotPasswordLink.TabIndex = 11;
+            forgotPasswordLink.Text = "Forgot Password";
+            forgotPasswordLink.Click += forgotPasswordLink_Click;
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(885, 327);
-            Controls.Add(forgotLabel);
+            Controls.Add(forgotPasswordLink);
             Controls.Add(panel3);
             Controls.Add(ExitLabel);
             Controls.Add(txtPassword);
@@ -231,6 +232,6 @@
         private TextBox txtPassword;
         private Label ExitLabel;
         private Panel panel3;
-        private Label forgotLabel;
+        private Label forgotPasswordLink;
     }
 }

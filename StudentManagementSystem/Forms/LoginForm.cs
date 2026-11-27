@@ -1,3 +1,5 @@
+using System;
+using System.Windows.Forms;
 using StudentManagementSystem.Forms;
 using StudentManagementSystem.Model;
 
@@ -13,6 +15,7 @@ namespace StudentManagementSystem
         {
             InitializeComponent();
             this.AcceptButton = loginBtn;
+            txtPassword.UseSystemPasswordChar = true;
         }
 
         private void eyeIcon_Click(object sender, EventArgs e)
@@ -44,7 +47,7 @@ namespace StudentManagementSystem
 
             try
             {
-                User? currentUser = userRepo.GetUserByUsername(inputUser);  
+                User? currentUser = userRepo.GetUserByUsername(inputUser);
 
                 if (currentUser != null && currentUser.Login(inputPass))
                 {
@@ -66,7 +69,15 @@ namespace StudentManagementSystem
             }
         }
 
-
+        private void forgotPasswordLink_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (ForgotPasswordForm forgotForm = new ForgotPasswordForm())
+            {
+                forgotForm.ShowDialog();
+            }
+            this.Show(); 
+        }
 
         private void ExitLabel_Click(object sender, EventArgs e)
         {
