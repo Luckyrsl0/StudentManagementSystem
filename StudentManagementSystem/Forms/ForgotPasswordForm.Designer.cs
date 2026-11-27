@@ -45,9 +45,10 @@
             // 
             panel3.BackColor = SystemColors.GradientInactiveCaption;
             panel3.ForeColor = SystemColors.ControlLight;
-            panel3.Location = new Point(484, 57);
+            panel3.Location = new Point(424, 43);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(2, 322);
+            panel3.Size = new Size(2, 242);
             panel3.TabIndex = 21;
             // 
             // backLabel
@@ -56,23 +57,24 @@
             backLabel.Cursor = Cursors.Hand;
             backLabel.FlatStyle = FlatStyle.Flat;
             backLabel.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            backLabel.ForeColor = Color.Black;
-            backLabel.Location = new Point(670, 344);
+            backLabel.ForeColor = SystemColors.Highlight;
+            backLabel.Location = new Point(591, 258);
             backLabel.Name = "backLabel";
-            backLabel.Size = new Size(173, 30);
+            backLabel.Size = new Size(134, 22);
             backLabel.TabIndex = 20;
             backLabel.Text = "Back to Login";
             // 
             // continueBtn
             // 
-            continueBtn.BackColor = SystemColors.Control;
+            continueBtn.BackColor = SystemColors.HotTrack;
             continueBtn.Cursor = Cursors.Hand;
             continueBtn.FlatStyle = FlatStyle.Flat;
             continueBtn.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            continueBtn.ForeColor = Color.Black;
-            continueBtn.Location = new Point(631, 276);
+            continueBtn.ForeColor = SystemColors.HighlightText;
+            continueBtn.Location = new Point(552, 207);
+            continueBtn.Margin = new Padding(3, 2, 3, 2);
             continueBtn.Name = "continueBtn";
-            continueBtn.Size = new Size(250, 65);
+            continueBtn.Size = new Size(219, 49);
             continueBtn.TabIndex = 16;
             continueBtn.Text = "Continue";
             continueBtn.UseVisualStyleBackColor = false;
@@ -80,9 +82,11 @@
             // logoImage
             // 
             logoImage.BackgroundImageLayout = ImageLayout.Zoom;
-            logoImage.Location = new Point(103, 104);
+            logoImage.Image = Properties.Resources.mail;
+            logoImage.Location = new Point(90, 78);
+            logoImage.Margin = new Padding(3, 2, 3, 2);
             logoImage.Name = "logoImage";
-            logoImage.Size = new Size(307, 179);
+            logoImage.Size = new Size(269, 134);
             logoImage.SizeMode = PictureBoxSizeMode.Zoom;
             logoImage.TabIndex = 11;
             logoImage.TabStop = false;
@@ -92,30 +96,30 @@
             label1.AutoSize = true;
             label1.BackColor = SystemColors.Control;
             label1.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(579, 77);
+            label1.ForeColor = SystemColors.Highlight;
+            label1.Location = new Point(507, 58);
             label1.Name = "label1";
-            label1.Size = new Size(79, 40);
+            label1.Size = new Size(227, 32);
             label1.TabIndex = 22;
-            label1.Text = "Title";
+            label1.Text = "Forgot Password";
             // 
             // label2
             // 
-            label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.GrayText;
-            label2.Location = new Point(579, 117);
+            label2.Location = new Point(507, 90);
             label2.Name = "label2";
-            label2.Size = new Size(66, 20);
+            label2.Size = new Size(273, 56);
             label2.TabIndex = 23;
-            label2.Text = "caption";
+            label2.Text = "Having trouble accessing your account? Enter your username to identify your account and get assistance with password recovery.";
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.HotTrack;
-            panel1.Location = new Point(579, 244);
+            panel1.Location = new Point(507, 183);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(342, 3);
+            panel1.Size = new Size(299, 2);
             panel1.TabIndex = 13;
             // 
             // txtUsername
@@ -124,28 +128,29 @@
             txtUsername.BorderStyle = BorderStyle.None;
             txtUsername.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUsername.ForeColor = Color.Black;
-            txtUsername.Location = new Point(640, 206);
-            txtUsername.Margin = new Padding(3, 4, 3, 4);
+            txtUsername.Location = new Point(560, 154);
             txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
             txtUsername.PlaceholderText = "Username";
-            txtUsername.Size = new Size(285, 29);
+            txtUsername.Size = new Size(249, 22);
             txtUsername.TabIndex = 18;
             // 
             // personIcon
             // 
-            personIcon.Location = new Point(579, 198);
+            personIcon.Image = Properties.Resources.PersonIcon;
+            personIcon.Location = new Point(507, 148);
+            personIcon.Margin = new Padding(3, 2, 3, 2);
             personIcon.Name = "personIcon";
-            personIcon.Size = new Size(50, 41);
+            personIcon.Size = new Size(44, 31);
             personIcon.SizeMode = PictureBoxSizeMode.Zoom;
             personIcon.TabIndex = 12;
             personIcon.TabStop = false;
             // 
             // ForgotPasswordForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1011, 436);
+            ClientSize = new Size(885, 327);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(panel3);
@@ -155,7 +160,9 @@
             Controls.Add(panel1);
             Controls.Add(personIcon);
             Controls.Add(logoImage);
+            ForeColor = SystemColors.Highlight;
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "ForgotPasswordForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ForgotPasswordForm";
