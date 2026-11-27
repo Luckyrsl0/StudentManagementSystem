@@ -31,25 +31,25 @@
             label2 = new Label();
             label1 = new Label();
             panel3 = new Panel();
-            backLabel = new Label();
-            continueBtn = new Button();
+            backToLoginLink = new Label();
+            btnResetPassword = new Button();
             logoImage = new PictureBox();
-            txtBox = new TextBox();
+            txtConfirmPassword = new TextBox();
             panel2 = new Panel();
-            pictureBox = new PictureBox();
+            confirmPassEyeIcon = new PictureBox();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            textBox1 = new TextBox();
+            txtNewPassword = new TextBox();
             panel1 = new Panel();
-            pictureBox3 = new PictureBox();
+            newPassEyeIcon = new PictureBox();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)logoImage).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)confirmPassEyeIcon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)newPassEyeIcon).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -84,33 +84,35 @@
             panel3.Size = new Size(2, 242);
             panel3.TabIndex = 30;
             // 
-            // backLabel
+            // backToLoginLink
             // 
-            backLabel.AutoSize = true;
-            backLabel.Cursor = Cursors.Hand;
-            backLabel.FlatStyle = FlatStyle.Flat;
-            backLabel.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            backLabel.ForeColor = SystemColors.HotTrack;
-            backLabel.Location = new Point(578, 292);
-            backLabel.Name = "backLabel";
-            backLabel.Size = new Size(134, 22);
-            backLabel.TabIndex = 29;
-            backLabel.Text = "Back to Login";
+            backToLoginLink.AutoSize = true;
+            backToLoginLink.Cursor = Cursors.Hand;
+            backToLoginLink.FlatStyle = FlatStyle.Flat;
+            backToLoginLink.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            backToLoginLink.ForeColor = SystemColors.HotTrack;
+            backToLoginLink.Location = new Point(581, 292);
+            backToLoginLink.Name = "backToLoginLink";
+            backToLoginLink.Size = new Size(134, 22);
+            backToLoginLink.TabIndex = 29;
+            backToLoginLink.Text = "Back to Login";
+            backToLoginLink.Click += backToLoginLink_Click;
             // 
-            // continueBtn
+            // btnResetPassword
             // 
-            continueBtn.BackColor = SystemColors.HotTrack;
-            continueBtn.Cursor = Cursors.Hand;
-            continueBtn.FlatStyle = FlatStyle.Flat;
-            continueBtn.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            continueBtn.ForeColor = SystemColors.Control;
-            continueBtn.Location = new Point(544, 251);
-            continueBtn.Margin = new Padding(3, 2, 3, 2);
-            continueBtn.Name = "continueBtn";
-            continueBtn.Size = new Size(219, 38);
-            continueBtn.TabIndex = 27;
-            continueBtn.Text = "Continue";
-            continueBtn.UseVisualStyleBackColor = false;
+            btnResetPassword.BackColor = SystemColors.HotTrack;
+            btnResetPassword.Cursor = Cursors.Hand;
+            btnResetPassword.FlatStyle = FlatStyle.Flat;
+            btnResetPassword.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnResetPassword.ForeColor = SystemColors.Control;
+            btnResetPassword.Location = new Point(544, 251);
+            btnResetPassword.Margin = new Padding(3, 2, 3, 2);
+            btnResetPassword.Name = "btnResetPassword";
+            btnResetPassword.Size = new Size(219, 38);
+            btnResetPassword.TabIndex = 27;
+            btnResetPassword.Text = "Continue";
+            btnResetPassword.UseVisualStyleBackColor = false;
+            btnResetPassword.Click += btnResetPassword_Click;
             // 
             // logoImage
             // 
@@ -124,18 +126,18 @@
             logoImage.TabIndex = 24;
             logoImage.TabStop = false;
             // 
-            // txtBox
+            // txtConfirmPassword
             // 
-            txtBox.BackColor = SystemColors.Control;
-            txtBox.BorderStyle = BorderStyle.None;
-            txtBox.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBox.ForeColor = Color.FromArgb(19, 99, 212);
-            txtBox.Location = new Point(544, 155);
-            txtBox.Name = "txtBox";
-            txtBox.PlaceholderText = "Confirm new password";
-            txtBox.Size = new Size(200, 20);
-            txtBox.TabIndex = 35;
-            txtBox.UseSystemPasswordChar = true;
+            txtConfirmPassword.BackColor = SystemColors.Control;
+            txtConfirmPassword.BorderStyle = BorderStyle.None;
+            txtConfirmPassword.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtConfirmPassword.ForeColor = Color.FromArgb(19, 99, 212);
+            txtConfirmPassword.Location = new Point(544, 155);
+            txtConfirmPassword.Name = "txtConfirmPassword";
+            txtConfirmPassword.PlaceholderText = "Confirm new password";
+            txtConfirmPassword.Size = new Size(200, 20);
+            txtConfirmPassword.TabIndex = 35;
+            txtConfirmPassword.UseSystemPasswordChar = true;
             // 
             // panel2
             // 
@@ -146,17 +148,18 @@
             panel2.Size = new Size(299, 2);
             panel2.TabIndex = 34;
             // 
-            // pictureBox
+            // confirmPassEyeIcon
             // 
-            pictureBox.Cursor = Cursors.Hand;
-            pictureBox.Image = Properties.Resources.HiddenEyeIcon;
-            pictureBox.Location = new Point(750, 149);
-            pictureBox.Margin = new Padding(3, 2, 3, 2);
-            pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(44, 31);
-            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox.TabIndex = 33;
-            pictureBox.TabStop = false;
+            confirmPassEyeIcon.Cursor = Cursors.Hand;
+            confirmPassEyeIcon.Image = Properties.Resources.HiddenEyeIcon;
+            confirmPassEyeIcon.Location = new Point(750, 149);
+            confirmPassEyeIcon.Margin = new Padding(3, 2, 3, 2);
+            confirmPassEyeIcon.Name = "confirmPassEyeIcon";
+            confirmPassEyeIcon.Size = new Size(44, 31);
+            confirmPassEyeIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            confirmPassEyeIcon.TabIndex = 33;
+            confirmPassEyeIcon.TabStop = false;
+            confirmPassEyeIcon.Click += confirmPassEyeIcon_Click;
             // 
             // pictureBox1
             // 
@@ -182,18 +185,18 @@
             pictureBox2.TabIndex = 40;
             pictureBox2.TabStop = false;
             // 
-            // textBox1
+            // txtNewPassword
             // 
-            textBox1.BackColor = SystemColors.Control;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.FromArgb(19, 99, 212);
-            textBox1.Location = new Point(544, 99);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Enter new password";
-            textBox1.Size = new Size(200, 20);
-            textBox1.TabIndex = 39;
-            textBox1.UseSystemPasswordChar = true;
+            txtNewPassword.BackColor = SystemColors.Control;
+            txtNewPassword.BorderStyle = BorderStyle.None;
+            txtNewPassword.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNewPassword.ForeColor = Color.FromArgb(19, 99, 212);
+            txtNewPassword.Location = new Point(544, 99);
+            txtNewPassword.Name = "txtNewPassword";
+            txtNewPassword.PlaceholderText = "Enter new password";
+            txtNewPassword.Size = new Size(200, 20);
+            txtNewPassword.TabIndex = 39;
+            txtNewPassword.UseSystemPasswordChar = true;
             // 
             // panel1
             // 
@@ -204,17 +207,18 @@
             panel1.Size = new Size(299, 2);
             panel1.TabIndex = 38;
             // 
-            // pictureBox3
+            // newPassEyeIcon
             // 
-            pictureBox3.Cursor = Cursors.Hand;
-            pictureBox3.Image = Properties.Resources.HiddenEyeIcon;
-            pictureBox3.Location = new Point(750, 93);
-            pictureBox3.Margin = new Padding(3, 2, 3, 2);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(44, 31);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 37;
-            pictureBox3.TabStop = false;
+            newPassEyeIcon.Cursor = Cursors.Hand;
+            newPassEyeIcon.Image = Properties.Resources.HiddenEyeIcon;
+            newPassEyeIcon.Location = new Point(750, 93);
+            newPassEyeIcon.Margin = new Padding(3, 2, 3, 2);
+            newPassEyeIcon.Name = "newPassEyeIcon";
+            newPassEyeIcon.Size = new Size(44, 31);
+            newPassEyeIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            newPassEyeIcon.TabIndex = 37;
+            newPassEyeIcon.TabStop = false;
+            newPassEyeIcon.Click += newPassEyeIcon_Click;
             // 
             // label3
             // 
@@ -259,17 +263,17 @@
             Controls.Add(label3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
-            Controls.Add(textBox1);
-            Controls.Add(txtBox);
+            Controls.Add(txtNewPassword);
+            Controls.Add(txtConfirmPassword);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox);
+            Controls.Add(newPassEyeIcon);
+            Controls.Add(confirmPassEyeIcon);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(panel3);
-            Controls.Add(backLabel);
-            Controls.Add(continueBtn);
+            Controls.Add(backToLoginLink);
+            Controls.Add(btnResetPassword);
             Controls.Add(logoImage);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
@@ -277,10 +281,10 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ResetPasswordForm";
             ((System.ComponentModel.ISupportInitialize)logoImage).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)confirmPassEyeIcon).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)newPassEyeIcon).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -290,17 +294,17 @@
         private Label label2;
         private Label label1;
         private Panel panel3;
-        private Label backLabel;
-        private Button continueBtn;
+        private Label backToLoginLink;
+        private Button btnResetPassword;
         private PictureBox logoImage;
-        private TextBox txtBox;
+        private TextBox txtConfirmPassword;
         private Panel panel2;
-        private PictureBox pictureBox;
+        private PictureBox confirmPassEyeIcon;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private TextBox textBox1;
+        private TextBox txtNewPassword;
         private Panel panel1;
-        private PictureBox pictureBox3;
+        private PictureBox newPassEyeIcon;
         private Label label3;
         private Label label4;
         private Label label5;
