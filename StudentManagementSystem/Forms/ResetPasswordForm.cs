@@ -95,8 +95,8 @@ namespace StudentManagementSystem.Forms
             isNewPasswordVisible = !isNewPasswordVisible;
             txtNewPassword.UseSystemPasswordChar = !isNewPasswordVisible;
             newPassEyeIcon.Image = isNewPasswordVisible
-                ? Properties.Resources.ShowEyeIcon
-                : Properties.Resources.HiddenEyeIcon;
+                ? Properties.Resources.showEyeIcon
+                : Properties.Resources.hiddenEyeIcon;
         }
 
         private void confirmPassEyeIcon_Click(object sender, EventArgs e)
@@ -104,8 +104,8 @@ namespace StudentManagementSystem.Forms
             isConfirmPasswordVisible = !isConfirmPasswordVisible;
             txtConfirmPassword.UseSystemPasswordChar = !isConfirmPasswordVisible;
             confirmPassEyeIcon.Image = isConfirmPasswordVisible
-                ? Properties.Resources.ShowEyeIcon
-                : Properties.Resources.HiddenEyeIcon;
+                ? Properties.Resources.showEyeIcon
+                : Properties.Resources.hiddenEyeIcon;
         }
 
         private void backToLoginLink_Click(object sender, EventArgs e)

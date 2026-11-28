@@ -34,21 +34,22 @@
             panel2 = new Panel();
             eyeIcon = new PictureBox();
             loginBtn = new Button();
-            loginLabel = new Label();
             txtUsername = new TextBox();
             txtPassword = new TextBox();
-            ExitLabel = new Label();
-            panel3 = new Panel();
             forgotPasswordLink = new Label();
+            wavesPanel = new Panel();
+            ExitLabel = new Label();
+            loginLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)logoImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)personIcon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)eyeIcon).BeginInit();
+            wavesPanel.SuspendLayout();
             SuspendLayout();
             // 
             // logoImage
             // 
             logoImage.BackgroundImageLayout = ImageLayout.Zoom;
-            logoImage.Image = Properties.Resources.Logo;
+            logoImage.Image = Properties.Resources.logo;
             logoImage.Location = new Point(73, 44);
             logoImage.Margin = new Padding(3, 2, 3, 2);
             logoImage.Name = "logoImage";
@@ -59,7 +60,7 @@
             // 
             // personIcon
             // 
-            personIcon.Image = Properties.Resources.PersonIcon;
+            personIcon.Image = Properties.Resources.person;
             personIcon.Location = new Point(501, 57);
             personIcon.Margin = new Padding(3, 2, 3, 2);
             personIcon.Name = "personIcon";
@@ -70,7 +71,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.HotTrack;
+            panel1.BackColor = Color.FromArgb(15, 40, 84);
             panel1.Location = new Point(501, 92);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
@@ -79,7 +80,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = SystemColors.HotTrack;
+            panel2.BackColor = Color.FromArgb(15, 40, 84);
             panel2.Location = new Point(501, 166);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
@@ -89,7 +90,7 @@
             // eyeIcon
             // 
             eyeIcon.Cursor = Cursors.Hand;
-            eyeIcon.Image = Properties.Resources.HiddenEyeIcon;
+            eyeIcon.Image = Properties.Resources.hiddenEyeIcon;
             eyeIcon.Location = new Point(501, 130);
             eyeIcon.Margin = new Padding(3, 2, 3, 2);
             eyeIcon.Name = "eyeIcon";
@@ -101,8 +102,9 @@
             // 
             // loginBtn
             // 
-            loginBtn.BackColor = SystemColors.HotTrack;
+            loginBtn.BackColor = Color.FromArgb(15, 40, 84);
             loginBtn.Cursor = Cursors.Hand;
+            loginBtn.FlatAppearance.BorderSize = 0;
             loginBtn.FlatStyle = FlatStyle.Flat;
             loginBtn.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             loginBtn.ForeColor = SystemColors.Control;
@@ -115,25 +117,12 @@
             loginBtn.UseVisualStyleBackColor = false;
             loginBtn.Click += loginBtn_Click;
             // 
-            // loginLabel
-            // 
-            loginLabel.AutoSize = true;
-            loginLabel.BackColor = SystemColors.Control;
-            loginLabel.Font = new Font("Segoe UI Black", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            loginLabel.ForeColor = SystemColors.Highlight;
-            loginLabel.Location = new Point(134, 188);
-            loginLabel.Name = "loginLabel";
-            loginLabel.Size = new Size(141, 47);
-            loginLabel.TabIndex = 6;
-            loginLabel.Text = "LOG IN";
-            loginLabel.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // txtUsername
             // 
-            txtUsername.BackColor = SystemColors.Control;
+            txtUsername.BackColor = Color.FromArgb(248, 250, 252);
             txtUsername.BorderStyle = BorderStyle.None;
             txtUsername.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.ForeColor = Color.FromArgb(19, 99, 212);
+            txtUsername.ForeColor = Color.FromArgb(28, 77, 141);
             txtUsername.Location = new Point(555, 63);
             txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
@@ -143,10 +132,10 @@
             // 
             // txtPassword
             // 
-            txtPassword.BackColor = SystemColors.Control;
+            txtPassword.BackColor = Color.FromArgb(248, 250, 252);
             txtPassword.BorderStyle = BorderStyle.None;
             txtPassword.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.ForeColor = Color.FromArgb(19, 99, 212);
+            txtPassword.ForeColor = Color.FromArgb(28, 77, 141);
             txtPassword.Location = new Point(551, 136);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Password";
@@ -154,35 +143,12 @@
             txtPassword.TabIndex = 8;
             txtPassword.UseSystemPasswordChar = true;
             // 
-            // ExitLabel
-            // 
-            ExitLabel.AutoSize = true;
-            ExitLabel.Cursor = Cursors.Hand;
-            ExitLabel.FlatStyle = FlatStyle.Flat;
-            ExitLabel.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ExitLabel.ForeColor = SystemColors.HotTrack;
-            ExitLabel.Location = new Point(635, 262);
-            ExitLabel.Name = "ExitLabel";
-            ExitLabel.Size = new Size(39, 22);
-            ExitLabel.TabIndex = 9;
-            ExitLabel.Text = "Exit";
-            ExitLabel.Click += ExitLabel_Click;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = SystemColors.GradientInactiveCaption;
-            panel3.Location = new Point(420, 44);
-            panel3.Margin = new Padding(3, 2, 3, 2);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(2, 242);
-            panel3.TabIndex = 10;
-            // 
             // forgotPasswordLink
             // 
             forgotPasswordLink.AutoSize = true;
             forgotPasswordLink.Cursor = Cursors.Hand;
             forgotPasswordLink.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            forgotPasswordLink.ForeColor = SystemColors.MenuHighlight;
+            forgotPasswordLink.ForeColor = Color.FromArgb(28, 77, 141);
             forgotPasswordLink.Location = new Point(690, 170);
             forgotPasswordLink.Name = "forgotPasswordLink";
             forgotPasswordLink.Size = new Size(105, 17);
@@ -190,23 +156,61 @@
             forgotPasswordLink.Text = "Forgot Password";
             forgotPasswordLink.Click += forgotPasswordLink_Click;
             // 
+            // wavesPanel
+            // 
+            wavesPanel.BackgroundImage = Properties.Resources.wave;
+            wavesPanel.BackgroundImageLayout = ImageLayout.Stretch;
+            wavesPanel.Controls.Add(ExitLabel);
+            wavesPanel.Controls.Add(loginLabel);
+            wavesPanel.Location = new Point(-4, 44);
+            wavesPanel.Name = "wavesPanel";
+            wavesPanel.Size = new Size(894, 303);
+            wavesPanel.TabIndex = 12;
+            // 
+            // ExitLabel
+            // 
+            ExitLabel.AutoSize = true;
+            ExitLabel.BackColor = Color.Transparent;
+            ExitLabel.Cursor = Cursors.Hand;
+            ExitLabel.FlatStyle = FlatStyle.Flat;
+            ExitLabel.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ExitLabel.ForeColor = Color.White;
+            ExitLabel.Location = new Point(645, 213);
+            ExitLabel.Name = "ExitLabel";
+            ExitLabel.Size = new Size(39, 22);
+            ExitLabel.TabIndex = 10;
+            ExitLabel.Text = "Exit";
+            ExitLabel.Click += ExitLabel_Click;
+            // 
+            // loginLabel
+            // 
+            loginLabel.AutoSize = true;
+            loginLabel.BackColor = Color.Transparent;
+            loginLabel.Font = new Font("Segoe UI Black", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            loginLabel.ForeColor = Color.FromArgb(15, 40, 84);
+            loginLabel.Location = new Point(134, 141);
+            loginLabel.Name = "loginLabel";
+            loginLabel.Size = new Size(141, 47);
+            loginLabel.TabIndex = 7;
+            loginLabel.Text = "LOG IN";
+            loginLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(248, 250, 252);
             ClientSize = new Size(885, 327);
             Controls.Add(forgotPasswordLink);
-            Controls.Add(panel3);
-            Controls.Add(ExitLabel);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
-            Controls.Add(loginLabel);
             Controls.Add(loginBtn);
             Controls.Add(panel2);
             Controls.Add(eyeIcon);
             Controls.Add(panel1);
             Controls.Add(personIcon);
             Controls.Add(logoImage);
+            Controls.Add(wavesPanel);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
@@ -215,6 +219,8 @@
             ((System.ComponentModel.ISupportInitialize)logoImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)personIcon).EndInit();
             ((System.ComponentModel.ISupportInitialize)eyeIcon).EndInit();
+            wavesPanel.ResumeLayout(false);
+            wavesPanel.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -227,11 +233,11 @@
         private Panel panel2;
         private PictureBox eyeIcon;
         private Button loginBtn;
-        private Label loginLabel;
         private TextBox txtUsername;
         private TextBox txtPassword;
-        private Label ExitLabel;
-        private Panel panel3;
         private Label forgotPasswordLink;
+        private Panel wavesPanel;
+        private Label ExitLabel;
+        private Label loginLabel;
     }
 }

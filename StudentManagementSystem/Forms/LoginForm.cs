@@ -25,12 +25,12 @@ namespace StudentManagementSystem
             if (isPasswordVisible)
             {
                 txtPassword.UseSystemPasswordChar = false;
-                eyeIcon.Image = Properties.Resources.ShowEyeIcon;
+                eyeIcon.Image = Properties.Resources.showEyeIcon;
             }
             else
             {
                 txtPassword.UseSystemPasswordChar = true;
-                eyeIcon.Image = Properties.Resources.HiddenEyeIcon;
+                eyeIcon.Image = Properties.Resources.hiddenEyeIcon;
             }
         }
 

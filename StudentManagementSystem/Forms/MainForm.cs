@@ -22,6 +22,5 @@ namespace StudentManagementSystem.Forms
             loginForm.Show();
             this.Hide();
         }
-
     }
 }

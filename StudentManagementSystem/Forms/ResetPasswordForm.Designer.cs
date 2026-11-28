@@ -30,8 +30,6 @@
         {
             label2 = new Label();
             label1 = new Label();
-            panel3 = new Panel();
-            backToLoginLink = new Label();
             btnResetPassword = new Button();
             logoImage = new PictureBox();
             txtConfirmPassword = new TextBox();
@@ -42,14 +40,17 @@
             txtNewPassword = new TextBox();
             panel1 = new Panel();
             newPassEyeIcon = new PictureBox();
-            label3 = new Label();
-            label4 = new Label();
+            panel3 = new Panel();
             label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            backToLoginLink = new Label();
             ((System.ComponentModel.ISupportInitialize)logoImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)confirmPassEyeIcon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)newPassEyeIcon).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -65,43 +66,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = SystemColors.Control;
+            label1.BackColor = Color.FromArgb(248, 250, 252);
             label1.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.HotTrack;
+            label1.ForeColor = Color.FromArgb(15, 40, 84);
             label1.Location = new Point(499, 23);
             label1.Name = "label1";
             label1.Size = new Size(215, 32);
             label1.TabIndex = 31;
             label1.Text = "Reset Password";
             // 
-            // panel3
-            // 
-            panel3.BackColor = SystemColors.GradientInactiveCaption;
-            panel3.ForeColor = SystemColors.ControlLight;
-            panel3.Location = new Point(416, 43);
-            panel3.Margin = new Padding(3, 2, 3, 2);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(2, 242);
-            panel3.TabIndex = 30;
-            // 
-            // backToLoginLink
-            // 
-            backToLoginLink.AutoSize = true;
-            backToLoginLink.Cursor = Cursors.Hand;
-            backToLoginLink.FlatStyle = FlatStyle.Flat;
-            backToLoginLink.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            backToLoginLink.ForeColor = SystemColors.HotTrack;
-            backToLoginLink.Location = new Point(581, 292);
-            backToLoginLink.Name = "backToLoginLink";
-            backToLoginLink.Size = new Size(134, 22);
-            backToLoginLink.TabIndex = 29;
-            backToLoginLink.Text = "Back to Login";
-            backToLoginLink.Click += backToLoginLink_Click;
-            // 
             // btnResetPassword
             // 
-            btnResetPassword.BackColor = SystemColors.HotTrack;
+            btnResetPassword.BackColor = Color.FromArgb(15, 40, 84);
             btnResetPassword.Cursor = Cursors.Hand;
+            btnResetPassword.FlatAppearance.BorderSize = 0;
             btnResetPassword.FlatStyle = FlatStyle.Flat;
             btnResetPassword.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnResetPassword.ForeColor = SystemColors.Control;
@@ -116,8 +94,9 @@
             // 
             // logoImage
             // 
+            logoImage.BackColor = Color.Transparent;
             logoImage.BackgroundImageLayout = ImageLayout.Zoom;
-            logoImage.Image = Properties.Resources.shiel;
+            logoImage.Image = Properties.Resources.shield;
             logoImage.Location = new Point(82, 78);
             logoImage.Margin = new Padding(3, 2, 3, 2);
             logoImage.Name = "logoImage";
@@ -128,10 +107,10 @@
             // 
             // txtConfirmPassword
             // 
-            txtConfirmPassword.BackColor = SystemColors.Control;
+            txtConfirmPassword.BackColor = Color.FromArgb(248, 250, 252);
             txtConfirmPassword.BorderStyle = BorderStyle.None;
             txtConfirmPassword.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtConfirmPassword.ForeColor = Color.FromArgb(19, 99, 212);
+            txtConfirmPassword.ForeColor = Color.FromArgb(28, 77, 141);
             txtConfirmPassword.Location = new Point(544, 155);
             txtConfirmPassword.Name = "txtConfirmPassword";
             txtConfirmPassword.PlaceholderText = "Confirm new password";
@@ -141,7 +120,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = SystemColors.HotTrack;
+            panel2.BackColor = Color.FromArgb(15, 40, 84);
             panel2.Location = new Point(494, 184);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
@@ -151,7 +130,7 @@
             // confirmPassEyeIcon
             // 
             confirmPassEyeIcon.Cursor = Cursors.Hand;
-            confirmPassEyeIcon.Image = Properties.Resources.HiddenEyeIcon;
+            confirmPassEyeIcon.Image = Properties.Resources.hiddenEyeIcon;
             confirmPassEyeIcon.Location = new Point(750, 149);
             confirmPassEyeIcon.Margin = new Padding(3, 2, 3, 2);
             confirmPassEyeIcon.Name = "confirmPassEyeIcon";
@@ -163,7 +142,6 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Image = Properties.Resources._lock;
             pictureBox1.Location = new Point(494, 149);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
@@ -175,7 +153,6 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Cursor = Cursors.Hand;
             pictureBox2.Image = Properties.Resources._lock;
             pictureBox2.Location = new Point(494, 93);
             pictureBox2.Margin = new Padding(3, 2, 3, 2);
@@ -187,10 +164,10 @@
             // 
             // txtNewPassword
             // 
-            txtNewPassword.BackColor = SystemColors.Control;
+            txtNewPassword.BackColor = Color.FromArgb(248, 250, 252);
             txtNewPassword.BorderStyle = BorderStyle.None;
             txtNewPassword.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNewPassword.ForeColor = Color.FromArgb(19, 99, 212);
+            txtNewPassword.ForeColor = Color.FromArgb(28, 77, 141);
             txtNewPassword.Location = new Point(544, 99);
             txtNewPassword.Name = "txtNewPassword";
             txtNewPassword.PlaceholderText = "Enter new password";
@@ -200,7 +177,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.HotTrack;
+            panel1.BackColor = Color.FromArgb(15, 40, 84);
             panel1.Location = new Point(494, 128);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
@@ -210,7 +187,7 @@
             // newPassEyeIcon
             // 
             newPassEyeIcon.Cursor = Cursors.Hand;
-            newPassEyeIcon.Image = Properties.Resources.HiddenEyeIcon;
+            newPassEyeIcon.Image = Properties.Resources.hiddenEyeIcon;
             newPassEyeIcon.Location = new Point(750, 93);
             newPassEyeIcon.Margin = new Padding(3, 2, 3, 2);
             newPassEyeIcon.Name = "newPassEyeIcon";
@@ -220,47 +197,76 @@
             newPassEyeIcon.TabStop = false;
             newPassEyeIcon.Click += newPassEyeIcon_Click;
             // 
-            // label3
+            // panel3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.GrayText;
-            label3.Location = new Point(510, 196);
-            label3.Name = "label3";
-            label3.Size = new Size(132, 17);
-            label3.TabIndex = 41;
-            label3.Text = "At least 8 characters";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = SystemColors.GrayText;
-            label4.Location = new Point(510, 211);
-            label4.Name = "label4";
-            label4.Size = new Size(251, 17);
-            label4.TabIndex = 42;
-            label4.Text = "Include uppercase and lowercase letters";
+            panel3.BackgroundImage = Properties.Resources.waev1;
+            panel3.BackgroundImageLayout = ImageLayout.Stretch;
+            panel3.Controls.Add(label5);
+            panel3.Controls.Add(label4);
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(backToLoginLink);
+            panel3.Location = new Point(-2, 196);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(894, 134);
+            panel3.TabIndex = 44;
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.GrayText;
-            label5.Location = new Point(510, 226);
+            label5.Location = new Point(511, 34);
             label5.Name = "label5";
             label5.Size = new Size(174, 17);
-            label5.TabIndex = 43;
+            label5.TabIndex = 47;
             label5.Text = "Include at least one number";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.GrayText;
+            label4.Location = new Point(511, 19);
+            label4.Name = "label4";
+            label4.Size = new Size(251, 17);
+            label4.TabIndex = 46;
+            label4.Text = "Include uppercase and lowercase letters";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.GrayText;
+            label3.Location = new Point(511, 4);
+            label3.Name = "label3";
+            label3.Size = new Size(132, 17);
+            label3.TabIndex = 45;
+            label3.Text = "At least 8 characters";
+            // 
+            // backToLoginLink
+            // 
+            backToLoginLink.AutoSize = true;
+            backToLoginLink.BackColor = Color.Transparent;
+            backToLoginLink.Cursor = Cursors.Hand;
+            backToLoginLink.FlatStyle = FlatStyle.Flat;
+            backToLoginLink.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            backToLoginLink.ForeColor = Color.White;
+            backToLoginLink.Location = new Point(582, 100);
+            backToLoginLink.Name = "backToLoginLink";
+            backToLoginLink.Size = new Size(134, 22);
+            backToLoginLink.TabIndex = 44;
+            backToLoginLink.Text = "Back to Login";
+            backToLoginLink.Click += backToLoginLink_Click;
             // 
             // ResetPasswordForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(248, 250, 252);
             ClientSize = new Size(885, 327);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(txtNewPassword);
@@ -271,10 +277,9 @@
             Controls.Add(confirmPassEyeIcon);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(panel3);
-            Controls.Add(backToLoginLink);
             Controls.Add(btnResetPassword);
             Controls.Add(logoImage);
+            Controls.Add(panel3);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "ResetPasswordForm";
@@ -285,6 +290,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)newPassEyeIcon).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -293,8 +300,6 @@
 
         private Label label2;
         private Label label1;
-        private Panel panel3;
-        private Label backToLoginLink;
         private Button btnResetPassword;
         private PictureBox logoImage;
         private TextBox txtConfirmPassword;
@@ -305,8 +310,10 @@
         private TextBox txtNewPassword;
         private Panel panel1;
         private PictureBox newPassEyeIcon;
-        private Label label3;
-        private Label label4;
+        private Panel panel3;
         private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label backToLoginLink;
     }
 }
